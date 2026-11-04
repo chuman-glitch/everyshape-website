@@ -12,8 +12,8 @@ It's a plain HTML site with no build step: edit a file, save, and the site updat
 | --- | --- |
 | `index.html` | All the words on the page |
 | `styles.css` | Colors, fonts, layout, the paper-cut buttons |
-| `script.js` | Small extras (footer year, contact form message) |
-| `assets/img/` | Logos, fruit icons, favicon |
+| `script.js` | Small extras (FAQ bubble, footer year, contact form message) |
+| `assets/img/` | Logos, fruit icons, favicon, photos, cut-outs, team |
 
 ## Common edits
 
@@ -21,11 +21,15 @@ It's a plain HTML site with no build step: edit a file, save, and the site updat
 
 **Finish placeholders.** Anything with `class="todo"` shows up highlighted on the site. Replace the text, then delete `class="todo"` (or just the word `todo`).
 
-**Add a team member.** In `index.html`, copy one whole `<article class="person">…</article>` block and paste it below the others. To use a real photo, put it in `assets/img/team/` and replace `<span class="todo">Photo</span>` with:
+**Add a team member.**
+- Founding team: copy one `<article class="founder …">…</article>` block. Put the photo in `assets/img/team/` and point the `<img src="…">` at it.
+- RBTs: copy one `<article class="rbt">…</article>` block. Replace `<span class="todo">Photo</span>` with `<img src="assets/img/team/name.jpg" alt="Name">`.
 
-```html
-<img src="assets/img/team/jane-smith.jpg" alt="Jane Smith">
-```
+**Add an FAQ.** Copy one question `<button class="faq-q" …>` and one answer `<div class="faq-a" …>`, and give both the next number (`q-7` / `a-7`). Pick a `data-color`: pink, yellow, orange, sage, peach, or red.
+
+**Cut-out photos.** Stickers use transparent PNGs in `assets/img/cutouts/` with the class `sticker`, which adds the white outline.
+
+**After changing styles.css or script.js,** raise the number in `styles.css?v=8` / `script.js?v=8` in `index.html` so visitors get the new version.
 
 **Change a section color.** In `styles.css`, the colors are at the top under `SECTION COLORS`.
 
