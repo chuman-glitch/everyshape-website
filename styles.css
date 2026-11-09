@@ -201,7 +201,7 @@ a { color: inherit; }
   background: var(--grain-soft), var(--yellow); background-blend-mode: multiply;
   border-radius: 999px 999px 28px 28px;
 }
-.frame--pop .doodle { left: -6%; top: -16%; width: 112%; z-index: 3; }
+.frame--pop .doodle { left: -4%; top: 24%; width: 104%; z-index: 3; }
 .frame--pop img {
   position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
   width: 112%; height: auto; max-width: none; object-fit: contain;

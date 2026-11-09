@@ -80,6 +80,9 @@
 
 /* ---------- PLAYFUL CTA BUTTONS ---------- */
 .cta { overflow: visible; }
+/* leave room above buttons whose doodle buddy pops up */
+.btn-row:has(.cta-buddy), .btns:has(.cta-buddy) { margin-top: 58px; }
+.paper-form .cta:has(.cta-buddy), .form .cta:has(.cta-buddy) { margin-top: 46px; }
 .cta-eyes { position: relative; display: inline-flex; gap: 2px; margin-left: 8px; vertical-align: middle; }
 .cta-eye {
   width: 17px; height: 17px; border-radius: 50%; background: #fff;
