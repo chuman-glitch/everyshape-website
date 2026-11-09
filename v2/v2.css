@@ -505,6 +505,10 @@ li:last-child > .faq-q { border-bottom: 1px solid rgba(42, 37, 35, .14); }
   .places__kid { width: 120px; top: -70px; }
   .duo__chair { width: 120px; bottom: -60px; }
   .faq__art { display: none; }
+  .step { grid-template-columns: 60px 1fr 18px; gap: 14px; }
+  .step__num { display: none; }
+  .step__art { width: 60px; height: 60px; }
+  .step__text strong { font-size: 1.15rem; }
   .form__pair { grid-template-columns: 1fr; }
   .detail {
     top: auto; bottom: 0; width: 100%; height: auto; max-height: 82vh;
