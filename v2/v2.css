@@ -821,18 +821,18 @@ li:last-child > .faq-q { border-bottom: 1px solid rgba(42, 37, 35, .14); }
 .text-btn { font: 800 .8rem/1 var(--font-head); letter-spacing: .14em; text-transform: uppercase; padding: 8px 0; border-bottom-width: 1.5px; }
 :lang(zh-Hans) .paper-btn, :lang(zh-Hans) .text-btn { letter-spacing: .06em; }
 
-/* ---------- round 14: simple line illustrations ----------
-   One locked shape behind an ink line drawing (assets/img/illus). */
-.d-illo, .aba2__illo { position: relative; aspect-ratio: 1; }
-.d-illo img, .aba2__illo img { position: absolute; display: block; }
-.d-illo__shp { width: 74%; left: 13%; top: 14%; }
-.d-illo__line { width: 100%; left: 0; top: 0; }
-/* in the dark detail panel the drawing sits on a paper plate */
-.d-illo { width: min(68%, 280px); margin: 4px 0 26px; border-radius: 28px; background: var(--grain-soft), var(--paper); background-blend-mode: multiply; }
-.d-illo img { animation: none; }
-.aba2__illo { width: clamp(170px, 16vw, 230px); margin: 34px 0 0 auto; rotate: 4deg; }
+/* ---------- round 14: kid cut-outs in the approach details and Our ABA ----------
+   A locked shape behind, the child as a white-outlined sticker in front. */
+.d-cut, .aba2__cut { position: relative; aspect-ratio: 1; }
+.d-cut__shp { position: absolute; width: 82%; left: 9%; top: 12%; }
+.d-cut__kid { position: absolute; left: 50%; bottom: 2%; transform: translateX(-50%); max-width: 92%; max-height: 98%; width: auto; }
+.d-cut { width: min(72%, 300px); margin: 0 0 22px; }
+.d-cut img { animation: none; }
+.d-cut--music .d-cut__kid { max-height: 104%; bottom: -4%; }
+.aba2__cut { width: clamp(190px, 18vw, 260px); margin: 30px 0 0 auto; rotate: 3deg; }
+@media (max-width: 900px) { .d-cut { width: 230px; } }
 
 /* chalk girl: bigger, sitting on the edge between Team and Places */
 .places__kid { width: clamp(190px, 17vw, 260px); top: clamp(-150px, -9vw, -110px); right: 7%; rotate: -6deg; z-index: 6; }
 #places { overflow: visible; }
-@media (max-width: 900px) { .places__kid { width: 150px; top: -80px; } .d-illo { width: 220px; } }
+@media (max-width: 900px) { .places__kid { width: 150px; top: -80px; } }
