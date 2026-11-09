@@ -258,6 +258,7 @@ button { font: inherit; color: inherit; }
   border-radius: 999px 999px 30px 30px;
 }
 .hello__kid { position: absolute; left: -4%; bottom: 4%; width: 80%; z-index: 2; }
+.hello__doodle { left: -8%; top: 0; width: 84%; z-index: 4; }
 .hello__pill { position: absolute; margin: 0; overflow: hidden; border-radius: 999px; border: 6px solid #fff; z-index: 3; }
 .hello__pill img { width: 100%; height: 100%; object-fit: cover; }
 .hello__pill--a { right: -4%; top: 2%; width: 36%; height: 42%; }
@@ -342,6 +343,10 @@ li:last-child > .step { border-bottom: 1px solid rgba(42, 37, 35, .2); }
 .way--theater .way__ic { fill: var(--yellow); }
 .way::after { content: "See what it builds →"; font: 800 .82rem/1 var(--font-head); color: var(--red); opacity: .0; transform: translateX(-6px); transition: opacity .3s, transform .3s var(--ease); }
 .way:hover::after { opacity: 1; transform: none; }
+:lang(es) .way::after { content: "Mira lo que desarrolla →"; }
+:lang(zh-Hans) .way::after { content: "看看能培养什么 →"; }
+.left__head { flex-wrap: wrap; }
+.left__head .lang { margin-top: 2px; }
 .trains { position: relative; margin-top: calc(48px + clamp(40px, 5vw, 64px)); padding: 26px 230px 6px 0; border-top: 1px solid rgba(42, 37, 35, .25); }
 .trains p { margin: 0; font: 900 clamp(1.5rem, 2.6vw, 2.3rem)/1.15 var(--font-head); letter-spacing: -0.025em; max-width: 30ch; }
 .trains strong { color: #fff; }

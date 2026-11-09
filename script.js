@@ -5,8 +5,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // When you set one up (see README), replace this block.
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  document.getElementById("form-note").textContent =
-    "Thanks! This form isn't connected yet. Please call or text +1 (917) 310-5162, or email hi@everyshapetherapy.com.";
+  var msg = "Thanks! This form isn't connected yet. Please call or text +1 (917) 310-5162, or email hi@everyshapetherapy.com.";
+  document.getElementById("form-note").textContent = window.ESI18n ? window.ESI18n.t(msg) : msg;
 });
 
 // FAQ: show the answer for the selected question inside the big bubble

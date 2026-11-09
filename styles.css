@@ -86,7 +86,7 @@ a { color: inherit; }
   font: 700 .62rem/1 var(--font-head); letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink-soft); white-space: nowrap;
 }
-.site-nav { display: flex; gap: 28px; margin-left: auto; font-family: var(--font-head); font-weight: 600; }
+.site-nav { display: flex; gap: 24px; margin-left: auto; font-family: var(--font-head); font-weight: 600; }
 .site-nav a { text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; transition: border-color .2s; }
 .site-nav a:hover { border-color: var(--orange); }
 
@@ -201,6 +201,7 @@ a { color: inherit; }
   background: var(--grain-soft), var(--yellow); background-blend-mode: multiply;
   border-radius: 999px 999px 28px 28px;
 }
+.frame--pop .doodle { left: -6%; top: -16%; width: 112%; z-index: 3; }
 .frame--pop img {
   position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
   width: 112%; height: auto; max-width: none; object-fit: contain;

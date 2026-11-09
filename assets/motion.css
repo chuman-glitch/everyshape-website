@@ -59,3 +59,79 @@
 @media (prefers-reduced-motion: reduce) {
   [data-magnetic] { transition: none; }
 }
+
+/* ---------- LANGUAGE SWITCHER ---------- */
+.lang { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid rgba(42, 37, 35, .14); background: rgba(255, 255, 255, .6); }
+.lang button {
+  border: 0; background: none; cursor: pointer; padding: 6px 10px; border-radius: 999px;
+  font: 800 .78rem/1 "Nunito Sans", system-ui, sans-serif; letter-spacing: .04em; color: inherit; opacity: .6;
+  transition: background-color .25s, color .25s, opacity .25s;
+}
+.lang button:hover { opacity: 1; }
+.lang button[aria-pressed="true"] { background: #2A2523; color: #fff; opacity: 1; }
+.lang--dark { border-color: rgba(255, 255, 255, .14); background: rgba(255, 255, 255, .06); }
+.lang--dark button[aria-pressed="true"] { background: #F4ECE4; color: #2A2523; }
+
+/* Chinese: fall back to good system fonts for characters */
+:lang(zh-Hans) body, :lang(zh-Hans) h1, :lang(zh-Hans) h2, :lang(zh-Hans) h3, :lang(zh-Hans) button {
+  font-family: "Nunito Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+
+/* ---------- PLAYFUL CTA BUTTONS ---------- */
+.cta { overflow: visible; }
+.cta-eyes { position: relative; display: inline-flex; gap: 2px; margin-left: 8px; vertical-align: middle; }
+.cta-eye {
+  width: 17px; height: 17px; border-radius: 50%; background: #fff;
+  box-shadow: inset 0 0 0 1.5px #2A2523;
+  display: grid; place-items: center; transition: transform .12s;
+}
+.cta-eye i { width: 8px; height: 8px; border-radius: 50%; background: #2A2523; transition: transform .08s linear; }
+.cta-eyes.is-blink .cta-eye { transform: scaleY(.1); }
+.cta:hover .cta-eye { transform: scale(1.12); }
+
+.cta-buddy {
+  position: absolute; left: 50%; bottom: 62%; width: 96px; height: auto; z-index: -3;
+  fill: none; stroke: #2A2523; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;
+  transform: translate(-50%, 55%) scale(.7); opacity: 0;
+  transition: transform .5s cubic-bezier(.3, 1.5, .5, 1), opacity .25s;
+  pointer-events: none;
+}
+.cta-buddy .f { fill: #fff; }
+.cta-buddy .d { fill: #2A2523; stroke: none; }
+.cta:hover .cta-buddy, .cta:focus-visible .cta-buddy { transform: translate(-50%, 0) scale(1); opacity: 1; }
+.cta-buddy__arm { transform-origin: 84px 64px; transform-box: view-box; }
+.cta:hover .cta-buddy__arm { animation: buddyWave .6s ease-in-out .35s infinite alternate; }
+@keyframes buddyWave { from { transform: rotate(-10deg); } to { transform: rotate(14deg); } }
+.cta-buddy__x { stroke-dasharray: 40; stroke-dashoffset: 40; transition: stroke-dashoffset .5s .35s; }
+.cta:hover .cta-buddy__x { stroke-dashoffset: 0; }
+
+.cta-sparks {
+  position: absolute; inset: -18px -26px; width: calc(100% + 52px); height: calc(100% + 36px);
+  fill: none; stroke: #2A2523; stroke-width: 1.6; stroke-linejoin: round; pointer-events: none; z-index: -3;
+}
+.cta-sparks > * { stroke-dasharray: 60; stroke-dashoffset: 60; transition: stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1); }
+.cta-sparks > *:nth-child(2) { transition-delay: .06s; }
+.cta-sparks > *:nth-child(3) { transition-delay: .12s; }
+.cta-sparks > *:nth-child(4), .cta-sparks > *:nth-child(5) { transition-delay: .18s; }
+.cta:hover .cta-sparks > * { stroke-dashoffset: 0; }
+
+.cta-bit { position: fixed; z-index: 9998; width: 12px; height: 12px; pointer-events: none; }
+.cta-bit--0 { border-radius: 50%; }
+.cta-bit--1 { border-radius: 999px 999px 2px 2px; }
+.cta-bit--2 { border-radius: 58% 42% 55% 45% / 48% 60% 40% 52%; width: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-buddy, .cta-sparks > * { transition: none; }
+}
+
+/* ---------- white line doodles drawn over photos ---------- */
+.doodle { position: absolute; pointer-events: none; fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; overflow: visible;
+  filter: drop-shadow(0 1px 1px rgba(42, 37, 35, .25)); }
+.doodle > * { stroke-dasharray: 220; stroke-dashoffset: 220; animation: doodleDraw 1.4s cubic-bezier(.2,.8,.2,1) forwards; }
+.doodle > *:nth-child(2) { animation-delay: .15s; }
+.doodle > *:nth-child(3), .doodle > *:nth-child(4), .doodle > *:nth-child(5) { animation-delay: .35s; }
+.doodle > *:nth-child(6), .doodle > *:nth-child(7) { animation-delay: .5s; }
+.doodle > *:nth-child(8), .doodle > *:nth-child(9) { animation-delay: .65s; }
+@keyframes doodleDraw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .doodle > * { animation: none; stroke-dashoffset: 0; } }

@@ -78,6 +78,7 @@
 
     function render() {
       detailBody.replaceChildren(tpl.content.cloneNode(true));
+      if (window.ESI18n) window.ESI18n.translate(detailBody);
       detail.hidden = false;
       if (src) src.style.viewTransitionName = "";
       var dst = detailBody.querySelector("[data-morph]");
@@ -135,7 +136,7 @@
   var form = document.getElementById("contact-form");
   if (form) form.addEventListener("submit", function (e) {
     e.preventDefault();
-    document.getElementById("form-note").textContent =
-      "Thanks! This form isn't connected yet. Please call or text +1 (917) 310-5162, or email hi@everyshapetherapy.com.";
+    var msg = "Thanks! This form isn't connected yet. Please call or text +1 (917) 310-5162, or email hi@everyshapetherapy.com.";
+    document.getElementById("form-note").textContent = window.ESI18n ? window.ESI18n.t(msg) : msg;
   });
 })();
