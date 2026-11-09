@@ -519,7 +519,7 @@ li:last-child > .row { border-bottom: 1px solid rgba(42, 37, 35, .2); }
 .rbts__face--c { background: var(--sage); }
 
 /* ---------- 06 places ---------- */
-.places__kid { position: absolute; right: 6%; top: -120px; width: clamp(150px, 15vw, 220px); rotate: -4deg; z-index: 5; }
+.places__kid { position: absolute; right: 6%; top: 24px; width: clamp(110px, 11vw, 160px); rotate: -4deg; z-index: 5; }
 .places {
   display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); grid-template-rows: 1fr 1fr;
   gap: 16px; margin-top: 26px;
