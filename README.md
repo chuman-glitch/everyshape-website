@@ -49,3 +49,30 @@ Then open http://localhost:8000.
 - Service area, phone, and email
 - FAQ answers, and the ABA explanation reviewed by the Clinical Director
 - Connect the contact form to an email service (for example Formspree). Collect only name, email, and role, never health information.
+
+## Languages (English, Español, 中文)
+
+The page is written in English. Spanish and Chinese live in `assets/i18n-strings.js`,
+one line per block of text:
+
+```js
+"Pick a way in.": ["Elige cómo empezar.", "选一个切入点。"],
+```
+
+- To fix a translation, edit the Spanish or Chinese text on that line.
+- If you change English text on the page, change the same English line here too
+  (otherwise that block stays in English when someone switches language).
+- Text marked `class="todo"` is never translated.
+- Link straight to a language with `?lang=es` or `?lang=zh` at the end of the address.
+
+## Playful buttons
+
+Add `data-cta="wave"`, `"drum"`, `"paint"` or `"eyes"` to any button or link:
+googly eyes follow the cursor, a doodle buddy peeks out on hover, and clicks burst
+into paper confetti.
+
+## Photos
+
+Put new photos in the EveryShape `photos` folder and ask Claude to place them, or
+drop a transparent PNG cut-out in `assets/img/cutouts/` and add `class="sticker"`
+for the white outline.
