@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="#fff" stroke="#2A2523" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<!-- drum with sticks and notes -->
+<path d="M78 150 L82 214 Q150 246 220 213 L223 150"/>
+<ellipse cx="150" cy="150" rx="73" ry="24"/>
+<path fill="none" d="M84 176 L112 214 L140 180 L168 220 L194 182 L218 208"/>
+<path fill="none" d="M188 116 L246 56"/><circle cx="250" cy="52" r="9"/>
+<path fill="none" d="M120 114 L72 52"/><circle cx="68" cy="48" r="9"/>
+<path d="M150 40 v46"/><ellipse cx="140" cy="88" rx="13" ry="10" transform="rotate(-18 140 88)"/>
+<path fill="none" d="M150 40 q14 6 22 22"/>
+<path d="M232 108 v34 M262 98 v34 M232 108 L262 98"/>
+<ellipse cx="224" cy="144" rx="10" ry="8" transform="rotate(-18 224 144)"/><ellipse cx="254" cy="134" rx="10" ry="8" transform="rotate(-18 254 134)"/>
+</svg>

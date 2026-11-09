@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="#fff" stroke="#2A2523" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<!-- a glitter shaker with sparkles: simple art for "Way more glitter" -->
+<path d="M110 120 L104 250 Q150 270 196 250 L190 120 Z"/>
+<path d="M104 96 h92 v26 h-92 z"/>
+<path fill="none" d="M120 104 v10 M140 104 v10 M160 104 v10 M180 104 v10"/>
+<circle cx="132" cy="170" r="4" fill="#2A2523"/><circle cx="160" cy="196" r="5" fill="#2A2523"/><circle cx="142" cy="226" r="4" fill="#2A2523"/><circle cx="172" cy="160" r="3" fill="#2A2523"/><circle cx="124" cy="206" r="3" fill="#2A2523"/><path fill="#2A2523" d="M168 230 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z" stroke-width="2"/>
+<path d="M150 20 l8 22 l22 8 l-22 8 l-8 22 l-8 -22 l-22 -8 l22 -8 z"/>
+<path d="M226 70 l5 14 l14 5 l-14 5 l-5 14 l-5 -14 l-14 -5 l14 -5 z"/>
+<path d="M76 60 l4 11 l11 4 l-11 4 l-4 11 l-4 -11 l-11 -4 l11 -4 z"/>
+<circle cx="230" cy="140" r="5"/><circle cx="72" cy="130" r="6"/><circle cx="250" cy="110" r="3"/><circle cx="50" cy="100" r="3"/>
+</svg>
