@@ -90,4 +90,4 @@ Every icon on the site uses one of five fixed cut-paper shapes in `assets/img/sh
 | `sage` | #8EA268 | Telehealth |
 | `red` | #C6493F | Spare |
 
-Don't redraw or recolor these; reuse the files.
+Don't redraw or recolor these; reuse the files. They can appear in any order or combination, as long as they come from this set.

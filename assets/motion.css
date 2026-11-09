@@ -140,7 +140,7 @@
 @media (prefers-reduced-motion: reduce) { .doodle > * { animation: none; stroke-dashoffset: 0; } }
 
 /* fruit on buttons: tilts and hops on hover */
-.cta-fruit { width: 22px; height: 22px; object-fit: contain; margin-left: 9px; vertical-align: middle; position: relative; transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); }
+.cta-fruit { width: 36px; height: 36px; object-fit: contain; margin: -10px -6px -10px 8px; vertical-align: middle; position: relative; transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); }
 .cta:hover .cta-fruit { transform: rotate(-16deg) translateY(-3px) scale(1.18); }
 .cta:active .cta-fruit { transform: rotate(10deg) scale(.95); }
 .paper-btn > span, .pill-btn > span { display: inline-flex; align-items: center; }

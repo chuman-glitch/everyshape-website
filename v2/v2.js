@@ -36,10 +36,10 @@
   }
 
   function goTo(id) {
-    var target = document.getElementById(id);
+    var target = document.getElementById(id) || document.querySelector('.ch[data-chapter="' + id + '"]');
     if (!target) return;
     closeDetail(true);
-    setActive(id);
+    setActive(target.getAttribute("data-chapter") || id);
     target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
   }
 
