@@ -739,3 +739,6 @@ li:last-child > .faq-q { border-bottom: 1px solid rgba(42, 37, 35, .14); }
 .d-btn { margin-top: 14px; }
 .left__foot .paper-btn { padding: 13px 22px; }
 @media (max-width: 900px) { .ins { grid-template-columns: 1fr; } .ins__list { grid-template-columns: 1fr 1fr; } }
+.ins__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ins__list li { min-height: 56px; }
+.foot .disclaimer { flex-basis: 100%; font-size: .8rem; opacity: .75; }

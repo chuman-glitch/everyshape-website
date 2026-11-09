@@ -210,5 +210,8 @@ window.ES_STRINGS = {
   "Insurance we work with.": ["Seguros con los que trabajamos.", "我们合作的保险。"],
   "Not sure if your plan covers ABA? Send us your plan name and we'll help you check.": ["¿No sabes si tu plan cubre ABA? Envíanos el nombre de tu plan y te ayudamos a verificarlo.", "不确定您的保险是否涵盖 ABA？告诉我们您的保险计划名称，我们帮您确认。"],
   "Check your coverage": ["Verifica tu cobertura", "查询保障范围"],
+  "Insurance networks": ["Redes de seguros", "保险网络"],
+  "We're in the process of joining these networks. Send us your plan name and we'll help you check your coverage.": ["Estamos en proceso de unirnos a estas redes. Envíanos el nombre de tu plan y te ayudamos a verificar tu cobertura.", "我们正在申请加入以下保险网络。告诉我们您的保险计划名称，我们帮您确认保障范围。"],
+  "Photos are for illustration only. Some are AI-generated or stock images, and none show Every Shape clients.": ["Las fotos son solo ilustrativas. Algunas fueron generadas con IA o son imágenes de archivo, y ninguna muestra a clientes de Every Shape.", "图片仅作示意。部分为 AI 生成或图库图片，均非 Every Shape 的客户。"],
   "Thanks! This form isn't connected yet. Please call or text +1 (917) 310-5162, or email hi@everyshapetherapy.com.": ["¡Gracias! Este formulario aún no está conectado. Llama o envía un mensaje al +1 (917) 310-5162, o escribe a hi@everyshapetherapy.com.", "谢谢！此表格暂未接通。请致电或发短信至 +1 (917) 310-5162，或发邮件至 hi@everyshapetherapy.com。"],
 };
