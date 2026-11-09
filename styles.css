@@ -666,5 +666,6 @@ a { color: inherit; }
 .ins__list li { min-height: 56px; }
 .disclaimer { flex-basis: 100%; font-size: .8rem !important; color: var(--ink-soft); margin: 0; }
 /* hero cut-out (landscape): spills past the arch */
-.frame--pop img.hero__easel { width: 165%; left: 42%; bottom: -2%; }
+.frame--pop img.hero__easel { width: 128%; left: 54%; bottom: -1%; }
+.hero__text { position: relative; z-index: 2; }
 .frame--pop .doodle { top: 4%; }
