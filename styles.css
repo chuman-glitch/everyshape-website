@@ -448,7 +448,7 @@ a { color: inherit; }
 .badges__ic--map  { background: var(--sage); border-radius: 50% 50% 50% 0; rotate: -45deg; }
 
 /* ---------- pick a way in ---------- */
-.ways { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; margin-top: 26px; }
+.ways { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; margin-top: 26px; align-items: start; }
 .way {
   position: relative; border-radius: 26px; padding: 24px 26px 22px;
   background: var(--grain-soft), rgba(255, 255, 255, .9); background-blend-mode: multiply;
@@ -456,8 +456,7 @@ a { color: inherit; }
   transition: border-radius .6s cubic-bezier(.2,.8,.2,1), transform .5s cubic-bezier(.2,.8,.2,1);
 }
 .way:hover { border-radius: 40px 26px 40px 26px; transform: translateY(-3px); }
-.way--art, .way--theater { margin-top: 28px; }
-.way--dance { margin-top: -28px; }
+.way--art, .way--theater { top: 40px; }
 .way h3 { font-size: 1.5rem; margin-bottom: .3em; }
 .way__ic { position: absolute; right: 20px; top: 18px; width: 54px; }
 .way__ic svg { width: 100%; height: auto; overflow: visible; }
@@ -472,7 +471,7 @@ a { color: inherit; }
   background: var(--ink); color: #fff; font: 700 .72rem/1.5 var(--font-head); letter-spacing: .08em; text-transform: uppercase;
 }
 .trains {
-  position: relative; margin-top: 40px; padding: 26px 30px 26px 0;
+  position: relative; margin-top: 84px; padding: 26px 30px 26px 0;
   border-top: 1.5px solid rgba(42, 37, 35, .25);
 }
 .trains p { margin: 0; max-width: 34ch; font: 800 clamp(1.4rem, 2.6vw, 2.1rem)/1.2 var(--font-head); letter-spacing: -0.015em; }
@@ -527,7 +526,8 @@ a { color: inherit; }
   .brand img { width: 112px; }
   .brand__tag { margin-left: 49px; font-size: .55rem; }
   .hero__grid, .split, .places, .community, .ways, .newaba { grid-template-columns: 1fr; }
-  .way--art, .way--theater, .way--dance { margin-top: 0; }
+  .way--art, .way--theater { top: 0; }
+  .trains { margin-top: 40px; }
   .trains { padding-right: 110px; }
   .trains__kid { width: 110px; top: -30px; }
   .newaba__chair { right: -10px; width: 110px; }
