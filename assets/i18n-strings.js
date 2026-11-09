@@ -206,5 +206,9 @@ window.ES_STRINGS = {
   "Play-based ABA, four ways in.": ["ABA a través del juego, cuatro formas de empezar.", "游戏化 ABA，四种切入方式。"],
   "Dallas, Austin, telehealth, and FAQs.": ["Dallas, Austin, telesalud y preguntas frecuentes.", "达拉斯、奥斯汀、远程服务与常见问题。"],
   "The people who work with your child week to week.": ["Las personas que trabajan con tu hijo cada semana.", "每周与您孩子一起工作的人。"],
+  "Insurance": ["Seguro médico", "保险"],
+  "Insurance we work with.": ["Seguros con los que trabajamos.", "我们合作的保险。"],
+  "Not sure if your plan covers ABA? Send us your plan name and we'll help you check.": ["¿No sabes si tu plan cubre ABA? Envíanos el nombre de tu plan y te ayudamos a verificarlo.", "不确定您的保险是否涵盖 ABA？告诉我们您的保险计划名称，我们帮您确认。"],
+  "Check your coverage": ["Verifica tu cobertura", "查询保障范围"],
   "Thanks! This form isn't connected yet. Please call or text +1 (917) 310-5162, or email hi@everyshapetherapy.com.": ["¡Gracias! Este formulario aún no está conectado. Llama o envía un mensaje al +1 (917) 310-5162, o escribe a hi@everyshapetherapy.com.", "谢谢！此表格暂未接通。请致电或发短信至 +1 (917) 310-5162，或发邮件至 hi@everyshapetherapy.com。"],
 };

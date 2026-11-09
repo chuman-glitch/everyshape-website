@@ -729,3 +729,13 @@ li:last-child > .faq-q { border-bottom: 1px solid rgba(42, 37, 35, .14); }
   .intro2, .path, .places--equal { grid-template-columns: 1fr; }
   .ways4, .rbts2__grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- insurance ---------- */
+.ins { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(28px, 4vw, 60px); align-items: center; }
+.ins h2 { margin-bottom: .3em; }
+.ins__text p:not(.kicker) { margin-bottom: 1.4em; }
+.ins__list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ins__list li { display: grid; place-items: center; min-height: 72px; padding: 10px; border-radius: 16px; background: rgba(255, 255, 255, .75); border: 1px solid rgba(255, 255, 255, .9); font: 700 .92rem/1.2 var(--font-head); text-align: center; }
+.d-btn { margin-top: 14px; }
+.left__foot .paper-btn { padding: 13px 22px; }
+@media (max-width: 900px) { .ins { grid-template-columns: 1fr; } .ins__list { grid-template-columns: 1fr 1fr; } }

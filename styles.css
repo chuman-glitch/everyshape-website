@@ -654,3 +654,11 @@ a { color: inherit; }
 .paper-btn { white-space: nowrap; }
 @media (max-width: 1100px) { .site-nav a[href="#our-aba"], .site-nav a[href="#locations"] { display: none; } }
 .intro2 h2 { font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 800; }
+
+/* ---------- insurance ---------- */
+.ins { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); align-items: center; margin: 0 0 clamp(56px, 7vw, 96px); padding: clamp(28px, 4vw, 44px); border-radius: 28px; background: var(--grain-soft), var(--blush); background-blend-mode: multiply; }
+.ins h2 { margin-bottom: .3em; }
+.ins__text p:not(.eyebrow) { margin-bottom: 1.4em; }
+.ins__list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ins__list li { display: grid; place-items: center; min-height: 72px; padding: 10px; border-radius: 16px; background: #fff; border: 1px solid rgba(42, 37, 35, .1); font: 700 .92rem/1.2 var(--font-head); text-align: center; }
+@media (max-width: 820px) { .ins { grid-template-columns: 1fr; } .ins__list { grid-template-columns: 1fr 1fr; } }
