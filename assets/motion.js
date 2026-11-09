@@ -7,6 +7,7 @@
    Everything is skipped when the visitor asks for reduced motion.
    ============================================================ */
 (function () {
+  var BASE = ((document.currentScript && document.currentScript.src) || "").replace(/motion\.js.*$/, "");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
@@ -137,12 +138,21 @@
       var kind = btn.getAttribute("data-cta");
       btn.classList.add("cta");
       var label = btn.querySelector("span") || btn;
-      var e = document.createElement("span");
-      e.className = "cta-eyes";
-      e.setAttribute("aria-hidden", "true");
-      e.innerHTML = '<span class="cta-eye"><i></i></span><span class="cta-eye"><i></i></span>';
-      label.after ? label.after(e) : btn.appendChild(e);
-      eyes.push.apply(eyes, e.querySelectorAll(".cta-eye"));
+      if (btn.hasAttribute("data-eyes")) {
+        var e = document.createElement("span");
+        e.className = "cta-eyes";
+        e.setAttribute("aria-hidden", "true");
+        e.innerHTML = '<span class="cta-eye"><i></i></span><span class="cta-eye"><i></i></span>';
+        label.after ? label.after(e) : btn.appendChild(e);
+        eyes.push.apply(eyes, e.querySelectorAll(".cta-eye"));
+      } else {
+        var f = document.createElement("img");
+        f.className = "cta-fruit";
+        f.alt = "";
+        f.setAttribute("aria-hidden", "true");
+        f.src = BASE + "img/icon-" + (btn.getAttribute("data-fruit") || "1") + ".png";
+        label.after ? label.after(f) : btn.appendChild(f);
+      }
       if (BUDDY[kind]) {
         var b = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         b.setAttribute("viewBox", "0 0 120 92");
