@@ -144,3 +144,4 @@
 .cta:hover .cta-fruit { transform: rotate(-16deg) translateY(-3px) scale(1.18); }
 .cta:active .cta-fruit { transform: rotate(10deg) scale(.95); }
 .paper-btn > span, .pill-btn > span { display: inline-flex; align-items: center; }
+.lang button { white-space: nowrap; }
