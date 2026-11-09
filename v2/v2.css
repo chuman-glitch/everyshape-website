@@ -322,7 +322,7 @@ li:last-child > .step { border-bottom: 1px solid rgba(42, 37, 35, .2); }
 .badges__ic--map  { background: var(--sage); border-radius: 50% 50% 50% 0; rotate: -45deg; }
 
 /* 02 pick a way in */
-.ways { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; }
+.ways { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; align-items: start; }
 .way {
   position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
   text-align: left; cursor: pointer; padding: 26px 28px 26px;
@@ -331,8 +331,7 @@ li:last-child > .step { border-bottom: 1px solid rgba(42, 37, 35, .2); }
   transition: border-radius .6s var(--ease), transform .5s var(--ease);
 }
 .way:hover { border-radius: 44px 28px 44px 28px; transform: translateY(-4px); }
-.way--art, .way--theater { margin-top: 34px; }
-.way--dance { margin-top: -34px; }
+.way--art, .way--theater { top: 48px; }
 .way__name { font: 900 1.6rem/1 var(--font-head); letter-spacing: -0.02em; }
 .way__line { font: 700 1.12rem/1.35 var(--font-head); max-width: 28ch; }
 .way__ic { position: absolute; right: 22px; top: 20px; width: 54px; }
@@ -343,10 +342,10 @@ li:last-child > .step { border-bottom: 1px solid rgba(42, 37, 35, .2); }
 .way--theater .way__ic { fill: var(--yellow); }
 .way::after { content: "See what it builds →"; font: 800 .82rem/1 var(--font-head); color: var(--red); opacity: .0; transform: translateX(-6px); transition: opacity .3s, transform .3s var(--ease); }
 .way:hover::after { opacity: 1; transform: none; }
-.trains { position: relative; margin-top: clamp(40px, 5vw, 64px); padding: 26px 230px 6px 0; border-top: 1px solid rgba(42, 37, 35, .25); }
+.trains { position: relative; margin-top: calc(48px + clamp(40px, 5vw, 64px)); padding: 26px 230px 6px 0; border-top: 1px solid rgba(42, 37, 35, .25); }
 .trains p { margin: 0; font: 900 clamp(1.5rem, 2.6vw, 2.3rem)/1.15 var(--font-head); letter-spacing: -0.025em; max-width: 30ch; }
 .trains strong { color: #fff; }
-.trains__kid { position: absolute; right: 0; top: -110px; width: clamp(150px, 15vw, 210px); rotate: 6deg; z-index: 5; }
+.trains__kid { position: absolute; right: 0; top: -20px; width: clamp(150px, 15vw, 210px); rotate: 6deg; z-index: 5; }
 
 /* 03 our ABA */
 .stays { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
@@ -581,7 +580,8 @@ li:last-child > .faq-q { border-bottom: 1px solid rgba(42, 37, 35, .14); }
   .right { height: auto; overflow: visible; }
   .ch { scroll-margin-top: 96px; }
   .grid-2-1, .grid-1-2, .people__head, .ways, .stays, .newaba { grid-template-columns: 1fr; }
-  .way--art, .way--theater, .way--dance { margin-top: 0; }
+  .way--art, .way--theater { top: 0; }
+  .trains { margin-top: 40px; }
   .trains { padding-right: 120px; }
   .trains__kid { width: 120px; top: -50px; }
   .newaba__chair { right: -10px; width: 110px; }
