@@ -514,6 +514,26 @@ a { color: inherit; }
 .changes li:nth-child(3) span { color: #7E9258; }
 .changes li:nth-child(4) span { color: var(--red); }
 
+
+/* ---------- our ABA (v3): one big idea, one feature, small supporting tags ---------- */
+.aba2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px clamp(32px, 6vw, 88px); align-items: start; }
+.aba2__lead { font-size: 1.05rem; color: var(--ink-soft); max-width: 40ch; margin: 18px 0 0; }
+.aba2__stays { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 14px 22px; flex-wrap: wrap; padding-top: 22px; border-top: 1.5px solid rgba(42, 37, 35, .12); }
+.aba2__stays .eyebrow { margin: 0; color: var(--ink-soft) !important; }
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { padding: 6px 13px; border-radius: 999px; background: rgba(255, 255, 255, .7); border: 1px solid rgba(42, 37, 35, .1); font: 700 .88rem/1.2 var(--font-head); }
+.aba2 .changes li { font-size: clamp(1.4rem, 2.4vw, 2rem); padding: 10px 0; }
+
+/* ---------- how it works (v3): compact, secondary ---------- */
+.how2 { padding-block: clamp(44px, 5vw, 68px); }
+.how2__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.how2__grid h2 { margin-bottom: 0; }
+.how2__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.how2__list li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; align-items: baseline; padding: 12px 0; border-top: 1.5px solid rgba(42, 37, 35, .1); }
+.how2__list li:last-child { border-bottom: 1.5px solid rgba(42, 37, 35, .1); }
+.how2__n { font: 800 1rem/1 var(--font-head); color: var(--orange); }
+.how2__list h3 { display: inline; font-size: 1.08rem; margin: 0 8px 0 0; }
+.how2__list p { display: inline; margin: 0; color: var(--ink-soft); font-size: 1rem; }
 /* ---------- tablets ---------- */
 @media (max-width: 980px) {
   .founders { grid-template-columns: repeat(2, 1fr); }
@@ -526,7 +546,7 @@ a { color: inherit; }
   .site-header .paper-btn { margin-left: auto; }
   .brand img { width: 112px; }
   .brand__tag { margin-left: 49px; font-size: .55rem; }
-  .hero__grid, .split, .places, .community, .ways, .newaba { grid-template-columns: 1fr; }
+  .hero__grid, .split, .places, .community, .ways, .newaba, .aba2, .how2__grid { grid-template-columns: 1fr; }
   .way--art, .way--theater { top: 0; }
   .trains { margin-top: 40px; }
   .trains { padding-right: 110px; }

@@ -10,12 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/motion.css?v=3">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
 </head>
 <body>
 
 <!-- Paper-cut motifs. Use one anywhere with:
-     <svg class="motif" style="..."><use href="#m-sun"/></svg> -->
+ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <filter id="paper" x="-10%" y="-10%" width="120%" height="120%">
@@ -66,7 +66,6 @@
   <!-- ===== 1. HERO (white) ===== -->
   <section class="sheet sheet--white hero">
     <div class="wrap hero__grid">
-      <svg class="motif" style="color:var(--yellow);fill:var(--yellow);left:-70px;top:-10px;width:64px;transform:rotate(12deg)"><use href="#m-sun"/></svg>
       <div class="hero__text">
         <p class="eyebrow">In-home and telehealth across Texas</p>
         <h1>ABA in every <span class="c-orange">color</span>, <span class="c-pink">beat</span>, and <span class="hl">shape.</span></h1>
@@ -95,7 +94,6 @@
           <img src="assets/img/photos/crayons.jpg" alt="A child drawing with crayons">
         </figure>
         <span class="hero__dash" aria-hidden="true"></span>
-        <svg class="motif motif--spark" style="color:var(--orange);left:-34px;top:26%;width:58px;transform:rotate(-70deg)"><use href="#m-spark"/></svg>
       </div>
     </div>
   </section>
@@ -103,30 +101,25 @@
   <!-- ===== 2. PICK A WAY IN (orange) ===== -->
   <section class="sheet sheet--orange" id="ways">
     <div class="wrap">
-      <svg class="motif" style="fill:var(--yellow);right:6%;top:-30px;width:70px;transform:rotate(-8deg)"><use href="#m-dots"/></svg>
       <p class="eyebrow">Music · Visual arts · Dance · Theater</p>
       <h2>Pick a way in.</h2>
       <div class="ways">
         <article class="way way--music">
-          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 160 40"><use href="#m-squiggle"/></svg></span>
           <h3>Music</h3>
           <p class="way__line">The song stops. Your child asks for more. That's a goal, met.</p>
           <p class="way__builds"><span>Builds</span> requesting · turn-taking · waiting</p>
         </article>
         <article class="way way--art">
-          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#m-blob"/></svg></span>
           <h3>Visual arts</h3>
           <p class="way__line">Need the blue crayon? Ask for the blue crayon.</p>
           <p class="way__builds"><span>Builds</span> asking for help · following directions · fine motor</p>
         </article>
         <article class="way way--dance">
-          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#m-spark"/></svg></span>
           <h3>Dance</h3>
           <p class="way__line">Copy the move. Then teach it to us.</p>
           <p class="way__builds"><span>Builds</span> imitation · body awareness · joint attention</p>
         </article>
         <article class="way way--theater">
-          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 100 60"><use href="#m-smile"/></svg></span>
           <h3>Theater</h3>
           <p class="way__line">The puppet is sad. What should we do?</p>
           <p class="way__builds"><span>Builds</span> emotions · conversation · pretend play</p>
@@ -139,76 +132,47 @@
     </div>
   </section>
 
-  <!-- ===== 3. OUR ABA: what stays, what changes (light pink) ===== -->
+  <!-- ===== 3. OUR ABA (light pink) ===== -->
   <section class="sheet sheet--blush" id="our-aba">
-    <svg class="motif" style="color:var(--pink);right:5%;bottom:60px;width:120px;transform:rotate(-6deg)"><use href="#m-squiggle"/></svg>
-    <div class="wrap">
-      <div class="split stays">
+    <div class="wrap aba2">
+      <div class="aba2__main">
+        <p class="eyebrow">Our ABA</p>
         <h2 class="glitter">Same goals.<br>Same data.<br><span>Way more glitter.</span></h2>
-        <div>
-          <p class="eyebrow">What stays</p>
-          <ul class="stays__list">
-            <li><strong>Individual assessment.</strong> We start with your child, not a template.</li>
-            <li><strong>Measurable goals.</strong> Written down, tracked, and reviewed with you.</li>
-            <li><strong>Data every session.</strong> We know what's working, and we show you.</li>
-            <li><strong>BCBA oversight.</strong> A Board Certified Behavior Analyst guides every plan.</li>
-            <li><strong>Family coaching.</strong> A skill counts when it works at dinner too.</li>
-          </ul>
-        </div>
+        <p class="aba2__lead">A new and improved ABA: built on naturalistic, play-based learning and informed by NET, PRT, and ESDM.</p>
       </div>
-
-      <div class="newaba">
-        <div class="newaba__intro">
-          <h2>A new and improved ABA</h2>
-          <p>Built on naturalistic and play-based learning, informed by the latest in NET, PRT, and ESDM methodologies.</p>
-          <div class="newaba__photo">
-            <figure><img src="assets/img/photos/shape-puzzle.jpg" alt="Small hands fitting wooden shapes into a puzzle board"></figure>
-            <img class="sticker newaba__chair" src="assets/img/cutouts/drawn-chair.png" alt="A white chair covered in a child's colorful drawings">
-          </div>
-        </div>
-        <div class="newaba__changes">
-          <p class="eyebrow">What changes</p>
-          <ul class="changes">
-            <li><s>Drills</s> <span>Drum solos</span></li>
-            <li><s>Flash cards</s> <span>Finger paint</span></li>
-            <li><s>Table time</s> <span>Stage time</span></li>
-            <li><s>Sit still</s> <span>Dance it out</span></li>
-          </ul>
-        </div>
+      <div class="aba2__changes">
+        <p class="eyebrow">What changes</p>
+        <ul class="changes">
+          <li><s>Drills</s> <span>Drum solos</span></li>
+          <li><s>Flash cards</s> <span>Finger paint</span></li>
+          <li><s>Table time</s> <span>Stage time</span></li>
+          <li><s>Sit still</s> <span>Dance it out</span></li>
+        </ul>
+      </div>
+      <div class="aba2__stays">
+        <p class="eyebrow">What stays</p>
+        <ul class="tags">
+          <li>Individual assessment</li>
+          <li>Measurable goals</li>
+          <li>Data every session</li>
+          <li>BCBA oversight</li>
+          <li>Family coaching</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- ===== 3b. HOW IT WORKS (white) ===== -->
-  <section class="sheet sheet--white" id="how">
-    <div class="wrap">
-      <p class="eyebrow">How it works</p>
-      <h2>Your child leads. We teach.</h2>
-      <ol class="steps">
-        <li class="step">
-          <span class="step__num">01</span>
-          <span class="step__art step__art--blob" aria-hidden="true"><img src="assets/img/icon-1.png" alt=""></span>
-          <div>
-            <h3>Your child picks</h3>
-            <p>The drum, the fingerpaints, the puppet, the trains. Whatever they reach for becomes the lesson.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step__num">02</span>
-          <span class="step__art step__art--flower" aria-hidden="true"><img src="assets/img/icon-2.png" alt=""></span>
-          <div>
-            <h3>We build the goals in</h3>
-            <p>A BCBA turns your child's goals into the game: asking for the next beat, taking turns with the brush, waiting for their cue.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step__num">03</span>
-          <span class="step__art step__art--scallop" aria-hidden="true"><img src="assets/img/icon-3.png" alt=""></span>
-          <div>
-            <h3>We track it and share it</h3>
-            <p>Data every session, reviewed with you, plus coaching so the skill shows up at dinner too.</p>
-          </div>
-        </li>
+  <section class="sheet sheet--white how2" id="how">
+    <div class="wrap how2__grid">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2>Your child leads. We teach.</h2>
+      </div>
+      <ol class="how2__list">
+        <li><span class="how2__n">1</span><div><h3>Your child picks</h3><p>The drum, the paint, the puppet, the trains.</p></div></li>
+        <li><span class="how2__n">2</span><div><h3>We weave in the goals</h3><p>A BCBA builds each goal into the game.</p></div></li>
+        <li><span class="how2__n">3</span><div><h3>You see it grow</h3><p>Progress you can see, at home and at the dinner table.</p></div></li>
       </ol>
     </div>
   </section>
@@ -251,8 +215,6 @@
       <div class="community__visual">
         <div class="community__arch"></div>
         <img class="sticker community__kids" src="assets/img/cutouts/running-kids.png" alt="A group of kids running together through a field">
-        <svg class="motif" style="fill:var(--orange);right:6%;top:4%;width:96px;transform:rotate(8deg)"><use href="#m-smile"/></svg>
-        <svg class="motif motif--spark" style="color:#fff;right:-10px;top:32%;width:60px;transform:rotate(70deg)"><use href="#m-spark"/></svg>
         <div class="stamp" aria-hidden="true">
           <span class="stamp__small">Every</span>
           <span class="stamp__big">month</span>
@@ -268,8 +230,6 @@
   <!-- ===== 5. TEAM (yellow) ===== -->
   <section class="sheet sheet--yellow" id="team">
     <div class="wrap">
-      <svg class="motif" style="fill:var(--orange);right:4%;top:-40px;width:72px;transform:rotate(14deg)"><use href="#m-sun"/></svg>
-      <svg class="motif" style="color:var(--white);right:18%;top:40px;width:130px;transform:rotate(4deg)"><use href="#m-squiggle"/></svg>
       <p class="eyebrow">The people behind the care</p>
       <h2>Real people. One team around your child.</h2>
       <p class="lead">Families deserve to know exactly who they'll be working with.</p>
@@ -352,7 +312,6 @@
   <section class="sheet sheet--white" id="locations">
     <div class="wrap">
       <img class="sticker places__kid" src="assets/img/cutouts/chalk-girl.png" alt="A little girl drawing with chalk on the pavement">
-      <svg class="motif" style="fill:var(--sage);right:30%;top:-20px;width:54px;transform:rotate(-10deg)"><use href="#m-leaf"/></svg>
       <p class="eyebrow">Where we work</p>
       <h2>Support in the places a child knows.</h2>
       <div class="places">
@@ -386,7 +345,6 @@
         <div class="faq-fruit" aria-hidden="true">
           <img class="faq-fruit__pear" src="assets/img/icon-1.png" alt="">
           <img class="faq-fruit__banana" src="assets/img/icon-3.png" alt="">
-          <svg class="motif" style="color:var(--orange);right:-6px;top:-14px;width:46px;transform:rotate(20deg)"><use href="#m-spark"/></svg>
         </div>
       </div>
       <div class="faq-c">
@@ -426,7 +384,6 @@
   <section class="sheet sheet--red" id="contact">
     <div class="wrap split">
       <div>
-        <svg class="motif" style="fill:var(--yellow);left:-120px;top:-40px;width:80px;transform:rotate(-12deg)"><use href="#m-blob"/></svg>
         <p class="eyebrow">Start a conversation</p>
         <h2>Want to know more?</h2>
         <p>Leave your name and email and we'll be in touch. This is a general question form, so please don't include medical details.</p>
@@ -467,9 +424,9 @@
   </div>
 </footer>
 
-<script src="assets/i18n-strings.js?v=1"></script>
+<script src="assets/i18n-strings.js?v=2"></script>
 <script src="assets/i18n.js?v=1"></script>
 <script src="assets/motion.js?v=2"></script>
-<script src="script.js?v=12"></script>
+<script src="script.js?v=13"></script>
 </body>
 </html>
