@@ -213,5 +213,12 @@ window.ES_STRINGS = {
   "Insurance networks": ["Redes de seguros", "保险网络"],
   "We're in the process of joining these networks. Send us your plan name and we'll help you check your coverage.": ["Estamos en proceso de unirnos a estas redes. Envíanos el nombre de tu plan y te ayudamos a verificar tu cobertura.", "我们正在申请加入以下保险网络。告诉我们您的保险计划名称，我们帮您确认保障范围。"],
   "Photos are for illustration only. Some are AI-generated or stock images, and none show Every Shape clients.": ["Las fotos son solo ilustrativas. Algunas fueron generadas con IA o son imágenes de archivo, y ninguna muestra a clientes de Every Shape.", "图片仅作示意。部分为 AI 生成或图库图片，均非 Every Shape 的客户。"],
+  "Places and insurance": ["Lugares y seguros", "地区与保险"],
+  "Dallas, Austin, telehealth, and insurance.": ["Dallas, Austin, telesalud y seguros.", "达拉斯、奥斯汀、远程服务与保险。"],
+  "05 · Good questions welcome": ["05 · Las buenas preguntas son bienvenidas", "05 · 欢迎提问"],
+  "06 · Start a conversation": ["06 · Empecemos a hablar", "06 · 开始对话"],
+  "Next community day": ["Próximo día en comunidad", "下一次社区日"],
+  "Learn more <span aria-hidden=\"true\">→</span>": ["Más información <span aria-hidden=\"true\">→</span>", "了解更多 <span aria-hidden=\"true\">→</span>"],
+  "<span>Our approach</span> <span aria-hidden=\"true\">↓</span>": ["<span>Nuestro enfoque</span> <span aria-hidden=\"true\">↓</span>", "<span>我们的方法</span> <span aria-hidden=\"true\">↓</span>"],
   "Thanks! This form isn't connected yet. Please call or text +1 (917) 310-5162, or email hi@everyshapetherapy.com.": ["¡Gracias! Este formulario aún no está conectado. Llama o envía un mensaje al +1 (917) 310-5162, o escribe a hi@everyshapetherapy.com.", "谢谢！此表格暂未接通。请致电或发短信至 +1 (917) 310-5162，或发邮件至 hi@everyshapetherapy.com。"],
 };

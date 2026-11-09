@@ -669,3 +669,33 @@ a { color: inherit; }
 .frame--pop img.hero__easel { width: 128%; left: 54%; bottom: -1%; }
 .hero__text { position: relative; z-index: 2; }
 .frame--pop .doodle { top: 4%; }
+
+/* ===== round 12 ===== */
+/* buttons: white paper with ink outline, colored paper behind */
+.paper-btn { --front: #fff; --back: var(--pink); }
+.paper-btn::after { box-shadow: inset 0 0 0 2px var(--ink); }
+.text-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 2px; font: 800 1.05rem/1 var(--font-head); color: var(--ink); text-decoration: none; border-bottom: 2.5px solid var(--ink); }
+.btn-row { align-items: center; }
+
+/* organic hero photo shapes */
+.frame--pill { border-radius: 58% 42% 52% 48% / 44% 56% 44% 56%; }
+.frame--pill + .frame--pill { border-radius: 44% 56% 40% 60% / 56% 44% 58% 42%; }
+
+/* team: small color block, cut-out portrait bleeding out the top */
+.founders { grid-template-columns: repeat(4, minmax(0, 210px)); justify-content: start; gap: 28px; }
+.founder__photo { aspect-ratio: 4 / 5; padding: 0; background: none !important; overflow: visible; border-radius: 0; }
+.founder__photo::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; top: 30%; border-radius: 22px; background: var(--grain-soft), var(--card); background-blend-mode: multiply; }
+.founder--orange .founder__photo { --card: #F0A07A; }
+.founder--pink   .founder__photo { --card: #E9A0AE; }
+.founder--sage   .founder__photo { --card: #B5C49A; }
+.founder--red    .founder__photo { --card: #DD9387; }
+.founder__photo > img.cut {
+  position: absolute; inset: auto; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 100%; height: auto; max-height: 104%; object-fit: contain; border-radius: 0;
+  filter: grayscale(1) contrast(1.05) drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 -3px 0 #fff);
+}
+.founder:hover .founder__photo > img.cut { filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 -3px 0 #fff); }
+.founder__photo .silhouette { position: relative; width: 70%; }
+.founder__tab { order: 3; margin: 10px 0 0; }
+.founder__bio { order: 4; margin-top: 10px; }
+.founder__name { z-index: 2; }

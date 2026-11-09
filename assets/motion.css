@@ -145,3 +145,11 @@
 .cta:active .cta-fruit { transform: rotate(10deg) scale(.95); }
 .paper-btn > span, .pill-btn > span { display: inline-flex; align-items: center; }
 .lang button { white-space: nowrap; }
+
+/* language toggle: outlined pills, same language as the buttons */
+.lang { gap: 4px; padding: 0; border: 0; background: none; }
+.lang button { border: 1.5px solid currentColor; opacity: .55; padding: 5px 10px; }
+.lang button:hover { opacity: .9; }
+.lang button[aria-pressed="true"] { opacity: 1; background: #2A2523; border-color: #2A2523; color: #fff; }
+.lang--dark { background: none; }
+.lang--dark button[aria-pressed="true"] { background: #F4ECE4; border-color: #F4ECE4; color: #2A2523; }
