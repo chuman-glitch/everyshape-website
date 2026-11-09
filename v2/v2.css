@@ -788,3 +788,5 @@ li:last-child > .faq-q { border-bottom: 1px solid rgba(42, 37, 35, .14); }
 .news .todo { color: var(--ink); }
 .news__link { margin-top: 10px; background: none; border: 0; padding: 0; cursor: pointer; color: var(--paper); font: 800 .86rem/1 var(--font-head); border-bottom: 1.5px solid currentColor; padding-bottom: 3px; }
 @media (max-width: 900px) { .news { display: none; } }
+.rbts2__grid { grid-template-columns: repeat(4, minmax(0, 150px)); justify-content: start; }
+@media (max-width: 900px) { .rbts2__grid { grid-template-columns: 1fr 1fr; } .founders { grid-template-columns: 1fr 1fr; } }
