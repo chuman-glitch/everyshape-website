@@ -742,3 +742,5 @@ li:last-child > .faq-q { border-bottom: 1px solid rgba(42, 37, 35, .14); }
 .ins__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ins__list li { min-height: 56px; }
 .foot .disclaimer { flex-basis: 100%; font-size: .8rem; opacity: .75; }
+.hello__kid { width: 125%; left: -18%; bottom: 6%; }
+.hello__doodle { top: 2%; }
