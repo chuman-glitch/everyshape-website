@@ -47,12 +47,13 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   mark(".brand", "data-magnetic", "0.15");
   mark(".frame--pill", "data-speed", function (i) { return i % 2 ? "-0.08" : "0.1"; });
   mark(".frame--pop img", "data-speed", "-0.05");
-  mark(".approach__kid, .places__kid", "data-speed", "0.12");
+  mark(".trains__kid, .places__kid", "data-speed", "0.12");
+  mark(".newaba__chair", "data-speed", "-0.12");
   mark(".duo__chair, .community__kids", "data-speed", "-0.1");
   mark(".duo__a", "data-speed", "0.05");
   mark(".duo__b", "data-speed", "-0.07");
   mark(".motif", "data-speed", function (i) { return i % 2 ? "-0.25" : "0.2"; });
-  mark(".sheet h2, .step, .founder, .rbt, .place, .outing", "data-reveal", function (i) { return String((i % 3) + 1); });
+  mark(".sheet h2, .step, .founder, .rbt, .place, .outing, .way, .stays__list li, .changes li", "data-reveal", function (i) { return String((i % 3) + 1); });
   mark(".founder, .rbt", "data-cursor", "Hi");
   mark(".faq-q", "data-cursor", "Ask");
   if (window.ESMotion) window.ESMotion.init();

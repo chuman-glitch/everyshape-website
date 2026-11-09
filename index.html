@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Every Shape Therapy | In-home ABA in Dallas, Austin and across Texas</title>
-  <meta name="description" content="Every Shape Therapy offers in-home ABA in Dallas and Austin, and telehealth support for families in rural Texas. We start with each child's strengths, interests, and creativity.">
+  <meta name="description" content="Art-based ABA therapy in Dallas, Austin, and across Texas. In-home naturalistic therapy taught through music, paint, dance, theater, and whatever your child loves.">
   <link rel="icon" type="image/png" href="assets/img/favicon-1.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/motion.css?v=1">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -47,10 +47,11 @@
 <header class="site-header">
   <a class="brand" href="#top" aria-label="Every Shape Therapy home">
     <img src="assets/img/logo-primary-tight.png" alt="Every Shape" width="820" height="270">
-    <span class="brand__tag">In-home ABA therapy</span>
+    <span class="brand__tag">Art-based ABA Therapy</span>
   </a>
   <nav class="site-nav" aria-label="Main">
-    <a href="#approach">Our approach</a>
+    <a href="#ways">Ways in</a>
+    <a href="#our-aba">Our ABA</a>
     <a href="#community">Community</a>
     <a href="#team">Team</a>
     <a href="#locations">Locations</a>
@@ -66,18 +67,21 @@
     <div class="wrap hero__grid">
       <svg class="motif" style="color:var(--yellow);fill:var(--yellow);left:-70px;top:-10px;width:64px;transform:rotate(12deg)"><use href="#m-sun"/></svg>
       <div class="hero__text">
-        <p class="eyebrow">In-home ABA · Dallas · Austin · Telehealth across Texas</p>
-        <h1>A different path to growth for <span class="hl">every child.</span></h1>
-        <p class="lead">We look for the strengths, interests, and creative sparks that make each child's path their own, and we build support around them at home.</p>
+        <p class="eyebrow">In-home and telehealth across Texas</p>
+        <h1>ABA in every <span class="c-orange">color</span>, <span class="c-pink">beat</span>, and <span class="hl">shape.</span></h1>
+        <p class="lead">In-home naturalistic therapy, taught through music, paint, dance, theater, and whatever creative channels your child desires.</p>
+        <ul class="badges">
+          <li><span class="badges__ic badges__ic--home" aria-hidden="true"></span>In your home</li>
+          <li><span class="badges__ic badges__ic--bcba" aria-hidden="true"></span>BCBA-led</li>
+          <li><span class="badges__ic badges__ic--map" aria-hidden="true"></span>Dallas, Austin, and rural Texas</li>
+        </ul>
         <div class="btn-row">
           <a class="paper-btn" href="#contact"><span>Talk to us</span></a>
-          <a class="paper-btn paper-btn--quiet" href="#approach"><span>See our approach</span></a>
+          <a class="paper-btn paper-btn--quiet" href="#ways"><span>Pick a way in</span></a>
         </div>
       </div>
 
-      <!-- Hero photos. To add one, put the file in assets/img/hero/ and
-           replace the <span class="frame__empty">…</span> with
-           <img src="assets/img/hero/your-photo.jpg" alt="Describe the photo"> -->
+      <!-- Hero photos. To change one, replace the src="…" with your own file. -->
       <div class="hero__photos">
         <figure class="frame frame--arch frame--yellow frame--pop">
           <img class="sticker" src="assets/img/cutouts/painting-kid.png" alt="A young child holding up a painted paper sun">
@@ -94,71 +98,116 @@
     </div>
   </section>
 
-  <!-- ===== 2. APPROACH (orange) ===== -->
-  <section class="sheet sheet--orange" id="approach">
+  <!-- ===== 2. PICK A WAY IN (orange) ===== -->
+  <section class="sheet sheet--orange" id="ways">
     <div class="wrap">
-      <img class="sticker approach__kid" src="assets/img/cutouts/upside-down.png" alt="A child hanging upside down on a playground bar, laughing">
-      <svg class="motif" style="fill:var(--yellow);right:30%;top:-30px;width:70px;transform:rotate(-8deg)"><use href="#m-dots"/></svg>
-      <p class="eyebrow">Our approach</p>
-      <h2>Start with what makes each child, themselves.</h2>
+      <svg class="motif" style="fill:var(--yellow);right:6%;top:-30px;width:70px;transform:rotate(-8deg)"><use href="#m-dots"/></svg>
+      <p class="eyebrow">Music · Visual arts · Dance · Theater</p>
+      <h2>Pick a way in.</h2>
+      <div class="ways">
+        <article class="way way--music">
+          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 160 40"><use href="#m-squiggle"/></svg></span>
+          <h3>Music</h3>
+          <p class="way__line">The song stops. Your child asks for more. That's a goal, met.</p>
+          <p class="way__builds"><span>Builds</span> requesting · turn-taking · waiting</p>
+        </article>
+        <article class="way way--art">
+          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#m-blob"/></svg></span>
+          <h3>Visual arts</h3>
+          <p class="way__line">Need the blue crayon? Ask for the blue crayon.</p>
+          <p class="way__builds"><span>Builds</span> asking for help · following directions · fine motor</p>
+        </article>
+        <article class="way way--dance">
+          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#m-spark"/></svg></span>
+          <h3>Dance</h3>
+          <p class="way__line">Copy the move. Then teach it to us.</p>
+          <p class="way__builds"><span>Builds</span> imitation · body awareness · joint attention</p>
+        </article>
+        <article class="way way--theater">
+          <span class="way__ic" aria-hidden="true"><svg viewBox="0 0 100 60"><use href="#m-smile"/></svg></span>
+          <h3>Theater</h3>
+          <p class="way__line">The puppet is sad. What should we do?</p>
+          <p class="way__builds"><span>Builds</span> emotions · conversation · pretend play</p>
+        </article>
+      </div>
+      <div class="trains">
+        <img class="sticker trains__kid" src="assets/img/cutouts/upside-down.png" alt="A child hanging upside down on a playground bar, laughing">
+        <p>Obsessed with trains? <strong>Perfect.</strong> We paint trains. We sing trains. We stage the great train opera.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. OUR ABA: what stays, what changes (light pink) ===== -->
+  <section class="sheet sheet--blush" id="our-aba">
+    <svg class="motif" style="color:var(--pink);left:30%;top:60px;width:120px;transform:rotate(-6deg)"><use href="#m-squiggle"/></svg>
+    <div class="wrap">
+      <div class="split stays">
+        <h2 class="glitter">Same goals.<br>Same data.<br><span>Way more glitter.</span></h2>
+        <div>
+          <p class="eyebrow">What stays</p>
+          <ul class="stays__list">
+            <li><strong>Individual assessment.</strong> We start with your child, not a template.</li>
+            <li><strong>Measurable goals.</strong> Written down, tracked, and reviewed with you.</li>
+            <li><strong>Data every session.</strong> We know what's working, and we show you.</li>
+            <li><strong>BCBA oversight.</strong> A Board Certified Behavior Analyst guides every plan.</li>
+            <li><strong>Family coaching.</strong> A skill counts when it works at dinner too.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="newaba">
+        <div class="newaba__intro">
+          <h2>A new and improved ABA</h2>
+          <p>Built on naturalistic and play-based learning, informed by the latest in NET, PRT, and ESDM methodologies.</p>
+          <div class="newaba__photo">
+            <figure><img src="assets/img/photos/shape-puzzle.jpg" alt="Small hands fitting wooden shapes into a puzzle board"></figure>
+            <img class="sticker newaba__chair" src="assets/img/cutouts/drawn-chair.png" alt="A white chair covered in a child's colorful drawings">
+          </div>
+        </div>
+        <div class="newaba__changes">
+          <p class="eyebrow">What changes</p>
+          <ul class="changes">
+            <li><s>Drills</s> <span>Drum solos</span></li>
+            <li><s>Flash cards</s> <span>Finger paint</span></li>
+            <li><s>Table time</s> <span>Stage time</span></li>
+            <li><s>Sit still</s> <span>Dance it out</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3b. HOW IT WORKS (white) ===== -->
+  <section class="sheet sheet--white" id="how">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Your child leads. We teach.</h2>
       <ol class="steps">
         <li class="step">
           <span class="step__num">01</span>
-          <span class="step__art step__art--blob" aria-hidden="true">
-            <img src="assets/img/icon-1.png" alt="">
-          </span>
+          <span class="step__art step__art--blob" aria-hidden="true"><img src="assets/img/icon-1.png" alt=""></span>
           <div>
-            <h3>Notice their strengths</h3>
-            <p>We look closely at what a child can already do, what they enjoy, and how they connect with the world.</p>
+            <h3>Your child picks</h3>
+            <p>The drum, the fingerpaints, <span class="todo">the rest of this step to add.</span></p>
           </div>
         </li>
         <li class="step">
           <span class="step__num">02</span>
-          <span class="step__art step__art--flower" aria-hidden="true">
-            <img src="assets/img/icon-2.png" alt="">
-          </span>
+          <span class="step__art step__art--flower" aria-hidden="true"><img src="assets/img/icon-2.png" alt=""></span>
           <div>
-            <h3>Follow their interests</h3>
-            <p>The things a child already loves are often the most natural place to start building skills and connection.</p>
+            <h3 class="todo">Step 2 title</h3>
+            <p class="todo">Step 2 description to add.</p>
           </div>
         </li>
         <li class="step">
           <span class="step__num">03</span>
-          <span class="step__art step__art--scallop" aria-hidden="true">
-            <img src="assets/img/icon-3.png" alt="">
-          </span>
+          <span class="step__art step__art--scallop" aria-hidden="true"><img src="assets/img/icon-3.png" alt=""></span>
           <div>
-            <h3>Make room for growth</h3>
-            <p>We focus on goals that matter in everyday life: at the table, at bedtime, at the park, with family.</p>
+            <h3 class="todo">Step 3 title</h3>
+            <p class="todo">Step 3 description to add.</p>
           </div>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <!-- ===== 3. ABA + CREATIVITY (light pink) ===== -->
-  <section class="sheet sheet--blush" id="aba">
-    <svg class="motif" style="fill:var(--orange);left:4%;bottom:70px;width:84px;transform:rotate(-14deg)"><use href="#m-tri"/></svg>
-    <svg class="motif" style="color:var(--pink);left:30%;top:60px;width:120px;transform:rotate(-6deg)"><use href="#m-squiggle"/></svg>
-    <div class="wrap split">
-      <div>
-        <p class="eyebrow">A simple introduction</p>
-        <h2>What is ABA?</h2>
-        <div class="dash-box dash-box--yellow">
-          <p>Applied Behavior Analysis (ABA) is an approach to understanding how people learn, and to supporting skills that make daily life easier. In home-based care, learning happens inside a child's own routines and surroundings.</p>
-          <p class="todo small">Draft: needs Clinical Director review.</p>
-        </div>
-      </div>
-      <div>
-        <p class="eyebrow">Creativity belongs here</p>
-        <h2>Some children show us what they love by making.</h2>
-        <p>Drawing, building, color, and play can be another way to communicate and connect. We make room for those interests inside each child's support.</p>
-        <div class="duo">
-          <figure class="duo__a"><img src="assets/img/photos/shape-puzzle.jpg" alt="Small hands fitting wooden shapes into a puzzle board"></figure>
-          <figure class="duo__b"><img src="assets/img/photos/fruit-cards.jpg" alt="A child sorting picture cards of fruit"></figure>
-          <img class="sticker duo__chair" src="assets/img/cutouts/drawn-chair.png" alt="A white plastic chair covered in a child's colorful drawings">
-        </div>
-      </div>
     </div>
   </section>
 
@@ -421,6 +470,6 @@
 </footer>
 
 <script src="assets/motion.js?v=1"></script>
-<script src="script.js?v=10"></script>
+<script src="script.js?v=11"></script>
 </body>
 </html>
