@@ -647,3 +647,10 @@ a { color: inherit; }
   .ways4 { grid-template-columns: 1fr 1fr; }
   .aba2__changes, .aba2__stays { grid-column: auto; grid-row: auto; }
 }
+
+/* header: keep menu items and the button on one line */
+.site-nav { gap: 20px; }
+.site-nav a { white-space: nowrap; font-size: .95rem; }
+.paper-btn { white-space: nowrap; }
+@media (max-width: 1100px) { .site-nav a[href="#our-aba"], .site-nav a[href="#locations"] { display: none; } }
+.intro2 h2 { font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 800; }
