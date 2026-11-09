@@ -76,3 +76,18 @@ into paper confetti.
 Put new photos in the EveryShape `photos` folder and ask Claude to place them, or
 drop a transparent PNG cut-out in `assets/img/cutouts/` and add `class="sticker"`
 for the white outline.
+
+## Brand shapes (locked)
+
+Every icon on the site uses one of five fixed shapes in `assets/img/shapes/`
+(SVG for the web, PNG for print or slides). See `_reference-sheet.png`.
+
+| Shape | Color | Used for |
+| --- | --- | --- |
+| Arch | Orange #E96E35 | In your home · step 1 · workshops |
+| Circle | Yellow #F5C742 | BCBA-led · step 2 · field trips · Dallas |
+| Triangle | Pink #D95870 | Dallas, Austin & rural Texas · step 3 · open house · Austin |
+| Square | Sage #8EA268 | Telehealth |
+| Pill | Red #C6493F | Spare |
+
+Don't redraw or recolor these; reuse the files.
