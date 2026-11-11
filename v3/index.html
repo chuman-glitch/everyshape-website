@@ -6,38 +6,41 @@
   <title>Every Shape Therapy | Art-based ABA in Dallas, Austin and across Texas</title>
   <meta name="description" content="Art-based ABA therapy in Dallas, Austin, and across Texas. In-home naturalistic therapy taught through music, paint, dance, theater, and whatever your child loves.">
   <link rel="icon" type="image/png" href="../assets/img/favicon-1.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="v3.css?v=1">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v3.css?v=2">
 </head>
 <body>
 
 <!-- ============================================================
-     VERSION 3 — calm, single page, with cards that open in place.
+     VERSION 3 — modern, quiet, warm.
      HOW TO EDIT
      - Text: change the words between the tags. Keep the tags.
      - Anything with class="todo" is highlighted on the site.
        Replace the text and delete class="todo" when it's final.
-     - Each card with data-open="x" opens the <template id="x"> found
-       near the bottom of this file. Edit the longer text there.
+     - Cards with data-open="x" open <template id="x"> (bottom of file).
      ============================================================ -->
+
+<div class="bar">
+  <p><span class="bar__dot" aria-hidden="true"></span>Now welcoming new families in Dallas, Austin, and rural Texas. <a href="#contact">Talk to us <span aria-hidden="true">→</span></a></p>
+</div>
 
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="#top" aria-label="Every Shape Therapy home">
       <img src="../assets/img/logo-primary-tight.png" alt="Every Shape" width="820" height="270">
-      <span class="brand__tag">Art-based ABA Therapy</span>
     </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#approach">Our approach</a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#approach">Approach</a>
       <a href="#community">Community</a>
       <a href="#team">Team</a>
       <a href="#places">Locations</a>
+      <a href="#start">Getting started</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button><button type="button" data-lang="zh" aria-pressed="false" lang="zh-Hans">中文</button></div>
-    <a class="btn btn--sm" href="#contact">Talk to us</a>
+    <a class="btn btn--sm top__cta" href="#contact">Talk to us</a>
+    <button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
@@ -45,148 +48,151 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="wrap hero__grid">
-      <div class="hero__text" data-reveal>
-        <p class="eyebrow">In-home and telehealth across Texas</p>
-        <h1>ABA in every color, beat, and shape.</h1>
-        <p class="lead">In-home naturalistic therapy, taught through music, paint, dance, theater, and whatever creative channels your child desires.</p>
-        <div class="btn-row">
-          <a class="btn" href="#contact">Talk to us</a>
-          <a class="link" href="#approach">See how it works</a>
-        </div>
-        <ul class="facts">
-          <li><img src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true">In your home</li>
-          <li><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">BCBA-led</li>
-          <li><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">Dallas, Austin, and rural Texas</li>
-        </ul>
+    <div class="wrap">
+      <p class="pill" data-reveal><img src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true">Art-based ABA therapy in Texas</p>
+      <h1 data-reveal>ABA in every <span class="hl">color, beat, and shape.</span></h1>
+      <p class="hero__sub" data-reveal="2">In-home naturalistic therapy, taught through music, paint, dance, theater, and whatever creative channels your child desires.</p>
+      <div class="btn-row btn-row--center" data-reveal="3">
+        <a class="btn" href="#contact">Talk to us</a>
+        <a class="btn btn--ghost" href="#approach">See how it works</a>
       </div>
-      <div class="hero__art" data-reveal="2">
-        <div class="hero__arch"></div>
-        <img class="cut hero__kid" src="../assets/img/cutouts/easel-rbt.png" alt="A child painting at an easel while a therapist holds the paint pots">
-        <figure class="hero__photo"><img src="../assets/img/photos/dance-home.jpg" alt="A child dancing in the living room"></figure>
+    </div>
+
+    <!-- Four ways in: hover or tap a photo to open it -->
+    <div class="wrap">
+      <div class="gallery" data-reveal="3">
+        <button class="g is-on" type="button" aria-expanded="true">
+          <img class="g__img" src="../assets/img/v3/dance.jpg" alt="A child dancing in the living room">
+          <span class="g__body">
+            <span class="g__tag"><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">Dance</span>
+            <span class="g__line">Copy the move. Then teach it to us.</span>
+            <span class="g__builds">Builds imitation, body awareness, and joint attention.</span>
+          </span>
+        </button>
+        <button class="g" type="button" aria-expanded="false">
+          <img class="g__img" src="../assets/img/v3/art.jpg" alt="A child painting at an easel while a therapist holds the paint pots">
+          <span class="g__body">
+            <span class="g__tag"><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">Visual arts</span>
+            <span class="g__line">Need the blue crayon? Ask for the blue crayon.</span>
+            <span class="g__builds">Builds asking for help, following directions, and fine motor skills.</span>
+          </span>
+        </button>
+        <button class="g" type="button" aria-expanded="false">
+          <img class="g__img" src="../assets/img/v3/music.jpg" alt="A child and an adult dancing to music at home">
+          <span class="g__body">
+            <span class="g__tag"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Music</span>
+            <span class="g__line">The song stops. Your child asks for more. That's a goal, met.</span>
+            <span class="g__builds">Builds requesting, turn-taking, and waiting.</span>
+          </span>
+        </button>
+        <button class="g" type="button" aria-expanded="false">
+          <img class="g__img" src="../assets/img/v3/theater.jpg" alt="A child and an adult playing with hand puppets in a blanket fort">
+          <span class="g__body">
+            <span class="g__tag"><img src="../assets/img/shapes/red.svg?v=4" alt="" aria-hidden="true">Theater</span>
+            <span class="g__line">The puppet is sad. What should we do?</span>
+            <span class="g__builds">Builds emotions, conversation, and pretend play.</span>
+          </span>
+        </button>
       </div>
+    </div>
+
+    <div class="wrap strip" data-reveal>
+      <p>BCBA-led care, at home or by telehealth.<br>Joining these insurance networks:</p>
+      <ul>
+        <li>Aetna</li><li>Blue Cross Blue Shield of Texas</li><li>Cigna</li><li>Molina</li><li>Superior HealthPlan</li><li>UnitedHealthcare</li><li>Wellpoint</li>
+      </ul>
     </div>
   </section>
 
   <!-- ===== APPROACH ===== -->
-  <section class="sec sec--tint-a" id="approach">
-    <div class="wrap">
-      <div class="head2" data-reveal>
-        <div>
-          <p class="eyebrow">Our approach</p>
-          <h2>Play is how we teach.</h2>
-        </div>
-        <p>ABA (Applied Behavior Analysis) is one of the most researched ways to help children build communication, social, and everyday skills. Ours is naturalistic and play-based: learning happens inside real play and daily routines, so new skills carry over to real life.</p>
+  <section class="sec" id="approach">
+    <div class="wrap split">
+      <div class="split__text" data-reveal>
+        <p class="eyebrow"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Our approach</p>
+        <h2>Play is how we <span class="hl">teach.</span></h2>
+        <p>ABA (Applied Behavior Analysis) is one of the most researched ways to help children build communication, social, and everyday skills.</p>
+        <p>Ours is naturalistic and play-based, informed by NET, PRT, and ESDM. Learning happens inside real play and daily routines, so new skills carry over to real life.</p>
       </div>
-
-      <p class="label">Four ways in <span>Tap a card to see what it looks like</span></p>
-      <div class="cards cards--4" data-group>
-        <button class="card" data-open="x-music" aria-expanded="false" data-reveal>
-          <img class="card__shp" src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">
-          <span class="card__title">Music</span>
-          <span class="card__text">The song stops. Your child asks for more. That's a goal, met.</span>
-          <span class="card__more">Learn more</span>
-        </button>
-        <button class="card" data-open="x-art" aria-expanded="false" data-reveal="2">
-          <img class="card__shp" src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">
-          <span class="card__title">Visual arts</span>
-          <span class="card__text">Need the blue crayon? Ask for the blue crayon.</span>
-          <span class="card__more">Learn more</span>
-        </button>
-        <button class="card" data-open="x-dance" aria-expanded="false" data-reveal="3">
-          <img class="card__shp" src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">
-          <span class="card__title">Dance</span>
-          <span class="card__text">Copy the move. Then teach it to us.</span>
-          <span class="card__more">Learn more</span>
-        </button>
-        <button class="card" data-open="x-theater" aria-expanded="false" data-reveal="4">
-          <img class="card__shp" src="../assets/img/shapes/red.svg?v=4" alt="" aria-hidden="true">
-          <span class="card__title">Theater</span>
-          <span class="card__text">The puppet is sad. What should we do?</span>
-          <span class="card__more">Learn more</span>
-        </button>
-      </div>
-
-      <div class="steps" data-reveal>
-        <p class="label">How it works</p>
-        <ol>
-          <li><span class="steps__n">1</span><strong>Your child picks</strong><span>Dinosaurs, baking, the color purple: whatever they love.</span></li>
-          <li><span class="steps__n">2</span><strong>We weave in the goals</strong><span>A BCBA builds each goal into the game.</span></li>
-          <li><span class="steps__n">3</span><strong>You see it grow</strong><span>Progress you can see, at home and at the dinner table.</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== OUR ABA ===== -->
-  <section class="sec" id="our-aba">
-    <div class="wrap aba">
-      <div data-reveal>
-        <p class="eyebrow">Our ABA</p>
-        <h2>Same goals. Same data. <em>More play.</em></h2>
-        <p>A new and improved ABA: built on naturalistic, play-based learning and informed by NET, PRT, and ESDM.</p>
-        <p class="label">What you can count on</p>
-        <ul class="tags">
-          <li>Individual plan</li>
-          <li>BCBA-led</li>
-          <li>Clear goals</li>
-          <li>Progress you can see</li>
-          <li>Parent coaching</li>
-          <li>Evidence-based</li>
-          <li>Naturalistic</li>
-          <li>In your home</li>
-        </ul>
-      </div>
-      <div class="swap" data-reveal="2">
-        <p class="label">What changes</p>
+      <div class="compare" data-reveal="2">
+        <div class="compare__head"><span>Instead of</span><span>We use</span></div>
         <ul>
           <li><s>Drills</s><span>Drum solos</span></li>
           <li><s>Flash cards</s><span>Finger paint</span></li>
           <li><s>Table time</s><span>Stage time</span></li>
           <li><s>Sit still</s><span>Dance it out</span></li>
         </ul>
+        <p class="compare__foot">Same goals. Same data. More play.</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <ul class="checks" data-reveal>
+        <li>Individual plan for your child</li>
+        <li>Led by a BCBA</li>
+        <li>Clear, measurable goals</li>
+        <li>Progress you can see</li>
+        <li>Parent coaching included</li>
+        <li>Sessions in your home</li>
+      </ul>
+    </div>
+
+    <div class="wrap how">
+      <div class="how__head" data-reveal>
+        <p class="eyebrow"><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">How it works</p>
+        <h2>Your child leads. We teach.</h2>
+      </div>
+      <div class="tiles">
+        <article class="tile" data-reveal>
+          <img src="../assets/img/v3/paper.jpg" alt="A child and therapist building a paper neighborhood at home">
+          <div class="tile__body"><span class="num">01</span><h3>Your child picks</h3><p>Dinosaurs, baking, the color purple: whatever they love becomes the lesson.</p></div>
+        </article>
+        <article class="tile" data-reveal="2">
+          <img src="../assets/img/v3/home.jpg" alt="A child painting a little world with a therapist">
+          <div class="tile__body"><span class="num">02</span><h3>We weave in the goals</h3><p>A BCBA builds each goal into the game, so practice feels like play.</p></div>
+        </article>
+        <article class="tile" data-reveal="3">
+          <img src="../assets/img/v3/outdoor.jpg" alt="A child and therapist drawing a chalk map in the backyard">
+          <div class="tile__body"><span class="num">03</span><h3>You see it grow</h3><p>Progress you can see, at home, at the park, and at the dinner table.</p></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== COMMUNITY ===== -->
-  <section class="sec sec--tint-b" id="community">
+  <!-- ===== COMMUNITY: tabs ===== -->
+  <section class="sec sec--soft" id="community">
     <div class="wrap">
-      <div class="head2" data-reveal>
-        <div>
-          <p class="eyebrow">Community days</p>
-          <h2>Once a month, we take learning out into the world.</h2>
-        </div>
-        <p>Kids get together, try something new, and practice social skills in real places, with our RBTs right there to support them. Community days are for children in our program who are ready for group activities, and for families who'd like to get to know us.</p>
+      <div class="head" data-reveal>
+        <p class="eyebrow"><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">Community days</p>
+        <h2>Once a month, we take learning out into the world.</h2>
+        <p>Kids try something new and practice social skills in real places, with our RBTs right there to support them.</p>
       </div>
-      <div class="community">
-        <div class="cards cards--3" data-group>
-          <button class="card" data-open="x-out-1" aria-expanded="false" data-reveal>
-            <img class="card__shp" src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true">
-            <span class="card__title">Artist-led workshops</span>
-            <span class="card__text">Local artists host hands-on sessions in painting, making, and building.</span>
-            <span class="card__more">Learn more</span>
+      <div class="tabs" data-reveal>
+        <div class="tabs__list" role="tablist" aria-label="Community days">
+          <button role="tab" id="t-1" aria-controls="p-1" aria-selected="true">
+            <strong>Artist-led workshops</strong>
+            <span>Local artists host hands-on sessions in painting, making, and building. Kids create side by side, share materials, and take turns.</span>
           </button>
-          <button class="card" data-open="x-out-2" aria-expanded="false" data-reveal="2">
-            <img class="card__shp" src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">
-            <span class="card__title">Field trips</span>
-            <span class="card__text">Dance studios, museums, and other places around town, explored together.</span>
-            <span class="card__more">Learn more</span>
+          <button role="tab" id="t-2" aria-controls="p-2" aria-selected="false">
+            <strong>Field trips</strong>
+            <span>Dance studios, museums, and other places around town. New places are a chance to practice flexibility, waiting, and asking for help.</span>
           </button>
-          <button class="card" data-open="x-out-3" aria-expanded="false" data-reveal="3">
-            <img class="card__shp" src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">
-            <span class="card__title">Open house</span>
-            <span class="card__text">Curious about our program? Come meet the team and see how we work.</span>
-            <span class="card__more">Learn more</span>
+          <button role="tab" id="t-3" aria-controls="p-3" aria-selected="false">
+            <strong>Open house for new families</strong>
+            <span>Bring your child, meet the team, and see how we work, with no commitment.</span>
           </button>
+          <p class="tabs__note">For children in our program who are ready for group activities, and for families who'd like to get to know us.</p>
         </div>
-        <aside class="event" data-reveal="2">
-          <img class="cut event__kids" src="../assets/img/cutouts/running-kids.png" alt="A group of kids running together through a field">
-          <p class="label">Next community day</p>
-          <p class="event__name todo">Event name</p>
-          <p class="event__meta todo">Date · Dallas or Austin</p>
-          <a class="btn btn--quiet" href="#contact">Ask about the next event</a>
-        </aside>
+        <div class="tabs__media">
+          <img role="tabpanel" id="p-1" aria-labelledby="t-1" src="../assets/img/photos/painting-table.jpg" alt="A child painting at the kitchen table">
+          <img role="tabpanel" id="p-2" aria-labelledby="t-2" src="../assets/img/v3/community.jpg" alt="Kids running together through a field" hidden>
+          <img role="tabpanel" id="p-3" aria-labelledby="t-3" src="../assets/img/v3/paper.jpg" alt="A child and therapist playing together at home" hidden>
+          <div class="next">
+            <p class="next__label">Next community day</p>
+            <p class="next__name todo">Event name</p>
+            <p class="next__meta todo">Date · Dallas or Austin</p>
+            <a class="btn btn--sm" href="#contact">Ask about it</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -194,89 +200,78 @@
   <!-- ===== TEAM ===== -->
   <section class="sec" id="team">
     <div class="wrap">
-      <div class="head2" data-reveal>
+      <div class="head head--row" data-reveal>
         <div>
-          <p class="eyebrow">The people behind the care</p>
+          <p class="eyebrow"><img src="../assets/img/shapes/red.svg?v=4" alt="" aria-hidden="true">Our team</p>
           <h2>Real people. One team around your child.</h2>
         </div>
-        <p>Families deserve to know exactly who they'll be working with. Tap a person to read more about them.</p>
+        <p>Families deserve to know exactly who they'll be working with. Select a person to read more.</p>
       </div>
       <div class="people" data-group>
-        <button class="person person--orange" data-open="x-chuman" aria-expanded="false" data-reveal>
-          <span class="person__photo"><img src="../assets/img/team/cutout/chuman.png" alt=""></span>
+        <button class="person" data-open="x-chuman" aria-expanded="false" data-reveal>
+          <span class="person__photo"><img src="../assets/img/team/chuman-zhang.jpg" alt=""></span>
           <span class="person__name">Chuman Zhang</span>
           <span class="person__role">Founder</span>
         </button>
-        <button class="person person--pink" data-open="x-kimberly" aria-expanded="false" data-reveal="2">
-          <span class="person__photo"><img src="../assets/img/team/cutout/kimberly.png" alt=""></span>
+        <button class="person" data-open="x-kimberly" aria-expanded="false" data-reveal="2">
+          <span class="person__photo"><img src="../assets/img/team/kimberly-sadovich.jpg" alt=""></span>
           <span class="person__name">Kimberly Sadovich</span>
           <span class="person__role">Clinical Director</span>
         </button>
-        <button class="person person--sage" data-open="x-maggie" aria-expanded="false" data-reveal="3">
-          <span class="person__photo"><img src="../assets/img/team/cutout/maggie.png" alt=""></span>
+        <button class="person" data-open="x-maggie" aria-expanded="false" data-reveal="3">
+          <span class="person__photo"><img src="../assets/img/team/maggie-terry.jpg" alt=""></span>
           <span class="person__name">Maggie Terry</span>
           <span class="person__role">Clinical Director</span>
         </button>
-        <button class="person person--red" data-open="x-cd4" aria-expanded="false" data-reveal="4">
-          <span class="person__photo person__photo--empty"><span class="todo">Photo</span></span>
+        <button class="person" data-open="x-cd4" aria-expanded="false" data-reveal="4">
+          <span class="person__photo person__photo--empty"><img src="../assets/img/shapes/sage.svg?v=4" alt=""></span>
           <span class="person__name todo">Name</span>
           <span class="person__role">Clinical Director</span>
         </button>
       </div>
-
       <div class="rbts" data-reveal>
-        <div class="rbts__head">
-          <p class="label">Our RBTs</p>
-          <p>Registered Behavior Technicians are the people who work with your child week to week.</p>
-        </div>
+        <p class="rbts__label">Our RBTs <span>Registered Behavior Technicians work with your child week to week.</span></p>
         <div class="rbts__grid">
-          <div class="rbt"><span class="rbt__photo"><span class="todo">Photo</span></span><p class="rbt__name todo">Name</p><p class="rbt__role">RBT · Dallas</p></div>
-          <div class="rbt"><span class="rbt__photo"><span class="todo">Photo</span></span><p class="rbt__name todo">Name</p><p class="rbt__role">RBT · Austin</p></div>
-          <div class="rbt"><span class="rbt__photo"><span class="todo">Photo</span></span><p class="rbt__name todo">Name</p><p class="rbt__role">RBT · Dallas</p></div>
-          <div class="rbt"><span class="rbt__photo"><span class="todo">Photo</span></span><p class="rbt__name todo">Name</p><p class="rbt__role">RBT · Austin</p></div>
+          <div class="rbt"><span class="rbt__photo"></span><p><b class="todo">Name</b><span>RBT · Dallas</span></p></div>
+          <div class="rbt"><span class="rbt__photo"></span><p><b class="todo">Name</b><span>RBT · Austin</span></p></div>
+          <div class="rbt"><span class="rbt__photo"></span><p><b class="todo">Name</b><span>RBT · Dallas</span></p></div>
+          <div class="rbt"><span class="rbt__photo"></span><p><b class="todo">Name</b><span>RBT · Austin</span></p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PLACES + INSURANCE ===== -->
-  <section class="sec sec--tint-c" id="places">
+  <!-- ===== LOCATIONS + INSURANCE ===== -->
+  <section class="sec sec--soft" id="places">
     <div class="wrap">
-      <img class="cut places__kid" src="../assets/img/cutouts/chalk-girl.png" alt="A little girl drawing with chalk on the pavement">
-      <div class="head2" data-reveal>
-        <div>
-          <p class="eyebrow">Where we work</p>
-          <h2>Support in the places a child knows.</h2>
-        </div>
+      <div class="head" data-reveal>
+        <p class="eyebrow"><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">Where we work</p>
+        <h2>Support in the places a child knows.</h2>
       </div>
-      <div class="cards cards--3" data-group>
+      <div class="cards" data-group>
         <button class="card" data-open="x-dallas" aria-expanded="false" data-reveal>
-          <img class="card__shp" src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">
-          <span class="card__title">Dallas</span>
-          <span class="card__text">In-home ABA across the Dallas area.</span>
+          <span class="num">Dallas</span>
+          <span class="card__title">In-home ABA across the Dallas area.</span>
           <span class="card__more">Areas we cover</span>
         </button>
         <button class="card" data-open="x-austin" aria-expanded="false" data-reveal="2">
-          <img class="card__shp" src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">
-          <span class="card__title">Austin</span>
-          <span class="card__text">In-home ABA across the Austin area.</span>
+          <span class="num">Austin</span>
+          <span class="card__title">In-home ABA across the Austin area.</span>
           <span class="card__more">Areas we cover</span>
         </button>
         <button class="card" data-open="x-tele" aria-expanded="false" data-reveal="3">
-          <img class="card__shp" src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">
-          <span class="card__title">Telehealth</span>
-          <span class="card__text">Support for families in rural Texas, wherever they are.</span>
+          <span class="num">Telehealth</span>
+          <span class="card__title">Support for families in rural Texas, wherever they are.</span>
           <span class="card__more">What's included</span>
         </button>
       </div>
 
-      <!-- INSURANCE: network applications in progress. Edit the list as plans are confirmed. -->
+      <!-- INSURANCE: network applications in progress. Edit as plans are confirmed. -->
       <div class="ins" data-reveal>
         <div>
-          <p class="label">Insurance</p>
-          <h3>Insurance networks</h3>
+          <h3>Insurance</h3>
           <p>We're in the process of joining these networks. Send us your plan name and we'll help you check your coverage.</p>
-          <a class="btn btn--quiet" href="#contact">Check your coverage</a>
+          <a class="btn btn--ghost btn--sm" href="#contact">Check your coverage</a>
         </div>
         <ul>
           <li>Molina Healthcare of Texas</li>
@@ -292,13 +287,29 @@
     </div>
   </section>
 
-  <!-- ===== FAQ: click a question to open its answer ===== -->
-  <section class="sec" id="faq">
+  <!-- ===== GETTING STARTED (please review these steps) ===== -->
+  <section class="sec" id="start">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <p class="eyebrow"><img src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true">Getting started</p>
+        <h2>What the first few weeks look like.</h2>
+      </div>
+      <ol class="steps" data-reveal>
+        <li><span class="steps__n">1</span><h3>Say hello</h3><p>Call, text, or send the form. We'll answer your questions, with no commitment.</p></li>
+        <li><span class="steps__n">2</span><h3>Check coverage</h3><p>We help you look into your insurance and what's covered.</p></li>
+        <li><span class="steps__n">3</span><h3>Meet your BCBA</h3><p>An assessment at home, then a plan built around your child and your goals.</p></li>
+        <li><span class="steps__n">4</span><h3>Sessions begin</h3><p>Your RBT comes to you, and you get coaching along the way.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="sec sec--soft" id="faq">
     <div class="wrap faq">
       <div data-reveal>
-        <p class="eyebrow">Good questions welcome</p>
-        <h2>A few things families often ask.</h2>
-        <p>Don't see your question? <a href="#contact">Ask us directly.</a></p>
+        <p class="eyebrow"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Questions</p>
+        <h2>Good questions welcome.</h2>
+        <p>Don't see yours? <a href="#contact">Ask us directly.</a></p>
       </div>
       <div class="acc" data-reveal="2">
         <details><summary>What does in-home ABA mean?</summary><div class="acc__a"><p class="todo">Answer to add.</p></div></details>
@@ -312,23 +323,26 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section class="sec sec--contact" id="contact">
-    <div class="wrap contact">
-      <div data-reveal>
-        <p class="eyebrow">Start a conversation</p>
-        <h2>Want to know more?</h2>
-        <p>Leave your name and email and we'll be in touch. This is a general question form, so please don't include medical details.</p>
-        <p class="contact__line">Call or text <a href="tel:+19173105162">+1 (917) 310-5162</a></p>
-        <p class="contact__line">Email <a href="mailto:hi@everyshapetherapy.com">hi@everyshapetherapy.com</a></p>
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="contact" data-reveal>
+        <div class="contact__text">
+          <h2>Want to know more?</h2>
+          <p>Leave your name and email and we'll be in touch. This is a general question form, so please don't include medical details.</p>
+          <dl>
+            <div><dt>Call or text</dt><dd><a href="tel:+19173105162">+1 (917) 310-5162</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:hi@everyshapetherapy.com">hi@everyshapetherapy.com</a></dd></div>
+          </dl>
+        </div>
+        <form class="form" id="contact-form">
+          <label><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
+          <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <label><span>Where are you?</span><select name="area"><option>Dallas area</option><option>Austin area</option><option>Elsewhere in Texas</option></select></label>
+          <label><span>I'm reaching out as</span><select name="role"><option>A parent or caregiver</option><option>A potential team member</option><option>Interested in community events</option><option>A referral partner</option><option>Something else</option></select></label>
+          <button class="btn" type="submit">Send</button>
+          <p class="form__note" id="form-note" role="status"></p>
+        </form>
       </div>
-      <form class="form" id="contact-form" data-reveal="2">
-        <label><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
-        <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
-        <label><span>Where are you?</span><select name="area"><option>Dallas area</option><option>Austin area</option><option>Elsewhere in Texas</option></select></label>
-        <label><span>I'm reaching out as</span><select name="role"><option>A parent or caregiver</option><option>A potential team member</option><option>Interested in community events</option><option>A referral partner</option><option>Something else</option></select></label>
-        <button class="btn" type="submit">Send</button>
-        <p class="form__note" id="form-note" role="status"></p>
-      </form>
     </div>
   </section>
 
@@ -336,78 +350,30 @@
 
 <footer class="foot">
   <div class="wrap foot__in">
-    <img src="../assets/img/logo-primary-tight.png" alt="Every Shape" width="820" height="270">
+    <div>
+      <img src="../assets/img/logo-primary-tight.png" alt="Every Shape" width="820" height="270">
+      <p>Art-based ABA therapy. Dallas, Austin, and telehealth across Texas.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#approach">Approach</a><a href="#community">Community</a><a href="#team">Team</a><a href="#places">Locations</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="foot__contact">
+      <a href="tel:+19173105162">+1 (917) 310-5162</a>
+      <a href="mailto:hi@everyshapetherapy.com">hi@everyshapetherapy.com</a>
+    </div>
+  </div>
+  <div class="wrap foot__base">
     <p>© <span id="year">2026</span> Every Shape Therapy LLC · Dallas, Texas</p>
-    <p class="foot__links"><a href="../">Version 1</a> · <a href="../v2/">Version 2</a></p>
     <p class="disclaimer">Photos are for illustration only. Some are AI-generated or stock images, and none show Every Shape clients.</p>
+    <p><a href="../">Version 1</a> · <a href="../v2/">Version 2</a></p>
   </div>
 </footer>
 
 <!-- ============================================================
-     OPENED CONTENT. Each card opens the template with its name.
+     OPENED CONTENT
      ============================================================ -->
-<template id="x-music">
-  <img class="x__kid" src="../assets/img/cutouts/upside-down.png" alt="A child hanging upside down, calling into a playground horn">
-  <div>
-    <p class="x__kicker">Music</p>
-    <h3>The song stops. Your child asks for more.</h3>
-    <p>Songs, rhythms, and instruments give natural pauses. Each pause is a chance to ask, wait, or take a turn, and the music itself is the reward.</p>
-    <p class="x__builds"><span>Builds</span> requesting · turn-taking · waiting</p>
-  </div>
-</template>
-<template id="x-art">
-  <img class="x__kid" src="../assets/img/cutouts/painting-kid.png" alt="A child painting a sun on glass">
-  <div>
-    <p class="x__kicker">Visual arts</p>
-    <h3>Need the blue crayon? Ask for the blue crayon.</h3>
-    <p>Painting, drawing, and making give lots of small moments to ask for help, follow a step, and practice hand skills, while making something your child is proud of.</p>
-    <p class="x__builds"><span>Builds</span> asking for help · following directions · fine motor</p>
-  </div>
-</template>
-<template id="x-dance">
-  <img class="x__kid" src="../assets/img/cutouts/dance-kid.png" alt="A child dancing in the living room">
-  <div>
-    <p class="x__kicker">Dance</p>
-    <h3>Copy the move. Then teach it to us.</h3>
-    <p>Movement games build imitation and body awareness. When your child leads the next move, they practice sharing attention with someone else.</p>
-    <p class="x__builds"><span>Builds</span> imitation · body awareness · joint attention</p>
-  </div>
-</template>
-<template id="x-theater">
-  <img class="x__kid" src="../assets/img/cutouts/puppet-kid.png" alt="A child playing with a wolf hand puppet">
-  <div>
-    <p class="x__kicker">Theater</p>
-    <h3>The puppet is sad. What should we do?</h3>
-    <p>Puppets and pretend play make feelings easier to talk about. Kids practice naming emotions, back-and-forth conversation, and solving small problems.</p>
-    <p class="x__builds"><span>Builds</span> emotions · conversation · pretend play</p>
-  </div>
-</template>
-
-<template id="x-out-1">
-  <div>
-    <p class="x__kicker">Community days</p>
-    <h3>Artist-led workshops</h3>
-    <p>Local artists host hands-on sessions in painting, making, and building. Kids create side by side, share materials, and practice taking turns, with RBTs on hand.</p>
-  </div>
-</template>
-<template id="x-out-2">
-  <div>
-    <p class="x__kicker">Community days</p>
-    <h3>Field trips</h3>
-    <p>Dance studios, museums, and other places around town, explored together. New places are a chance to practice flexibility, waiting, and asking for help.</p>
-  </div>
-</template>
-<template id="x-out-3">
-  <div>
-    <p class="x__kicker">Community days</p>
-    <h3>Open house for new families</h3>
-    <p>Curious about our program? Bring your child, meet the team, and see how we work, with no commitment.</p>
-    <a class="btn btn--quiet" href="#contact">Ask about the next one</a>
-  </div>
-</template>
-
 <template id="x-chuman">
-  <img class="x__photo x__photo--orange" src="../assets/img/team/chuman-zhang.jpg" alt="Chuman Zhang">
+  <img class="x__photo" src="../assets/img/team/chuman-zhang.jpg" alt="Chuman Zhang">
   <div>
     <p class="x__kicker">Founder</p>
     <h3>Chuman Zhang</h3>
@@ -420,7 +386,7 @@
   </div>
 </template>
 <template id="x-kimberly">
-  <img class="x__photo x__photo--pink" src="../assets/img/team/kimberly-sadovich.jpg" alt="Kimberly Sadovich">
+  <img class="x__photo" src="../assets/img/team/kimberly-sadovich.jpg" alt="Kimberly Sadovich">
   <div>
     <p class="x__kicker">Clinical Director</p>
     <h3>Kimberly Sadovich <span class="todo">credentials</span></h3>
@@ -433,7 +399,7 @@
   </div>
 </template>
 <template id="x-maggie">
-  <img class="x__photo x__photo--sage" src="../assets/img/team/maggie-terry.jpg" alt="Maggie Terry">
+  <img class="x__photo" src="../assets/img/team/maggie-terry.jpg" alt="Maggie Terry">
   <div>
     <p class="x__kicker">Clinical Director</p>
     <h3>Maggie Terry <span class="todo">credentials</span></h3>
@@ -452,34 +418,31 @@
     <p class="todo">Clinical background, and what they love about this work.</p>
   </div>
 </template>
-
 <template id="x-dallas">
   <div>
-    <p class="x__kicker">Where we work</p>
-    <h3>Dallas</h3>
-    <p>Our home base. We provide in-home ABA across the Dallas area.</p>
+    <p class="x__kicker">Dallas</p>
+    <h3>Our home base.</h3>
+    <p>We provide in-home ABA across the Dallas area.</p>
     <p class="todo">List the cities or ZIP codes you cover.</p>
   </div>
 </template>
 <template id="x-austin">
   <div>
-    <p class="x__kicker">Where we work</p>
-    <h3>Austin</h3>
-    <p>In-home ABA across the Austin area.</p>
+    <p class="x__kicker">Austin</p>
+    <h3>In-home ABA across the Austin area.</h3>
     <p class="todo">List the cities or ZIP codes you cover.</p>
   </div>
 </template>
 <template id="x-tele">
   <div>
-    <p class="x__kicker">Where we work</p>
-    <h3>Telehealth</h3>
-    <p>Support for families in rural Texas, wherever they are.</p>
+    <p class="x__kicker">Telehealth</p>
+    <h3>Support for families in rural Texas.</h3>
     <p class="todo">Describe what telehealth support includes.</p>
   </div>
 </template>
 
 <script src="../assets/i18n-strings.js?v=7"></script>
 <script src="../assets/i18n.js?v=1"></script>
-<script src="v3.js?v=1"></script>
+<script src="v3.js?v=2"></script>
 </body>
 </html>

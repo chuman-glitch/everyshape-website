@@ -47,7 +47,7 @@
     var tpl = document.getElementById(card.getAttribute("data-open"));
     if (!tpl) return;
     var p = document.createElement("div");
-    p.className = "xpanel" + (card.classList.contains("person") ? " xpanel--person" : "");
+    p.className = "xpanel";
     p.setAttribute("role", "region");
     p.innerHTML = '<div class="xpanel__clip"><div class="xpanel__in"><button class="xpanel__close" type="button" aria-label="Close">×</button></div></div>';
     var inner = p.querySelector(".xpanel__in");
@@ -86,6 +86,50 @@
       });
     }, 150);
   });
+
+  /* ---------- hero gallery: hover or tap a photo to open it ---------- */
+  var gs = Array.prototype.slice.call(document.querySelectorAll(".g"));
+  function pick(g) {
+    gs.forEach(function (x) { var on = x === g; x.classList.toggle("is-on", on); x.setAttribute("aria-expanded", on ? "true" : "false"); });
+  }
+  gs.forEach(function (g) {
+    g.addEventListener("click", function () { pick(g); });
+    g.addEventListener("mouseenter", function () { if (window.matchMedia("(hover: hover) and (min-width: 821px)").matches) pick(g); });
+    g.addEventListener("focus", function () { pick(g); });
+  });
+
+  /* ---------- community tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabs [role=tab]"));
+  function sel(t) {
+    tabs.forEach(function (x) {
+      var on = x === t;
+      x.setAttribute("aria-selected", on ? "true" : "false");
+      x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.tabIndex = i ? -1 : 0;
+    t.addEventListener("click", function () { sel(t); });
+    t.addEventListener("keydown", function (e) {
+      var d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return; e.preventDefault();
+      var n = tabs[(i + d + tabs.length) % tabs.length]; sel(n); n.focus();
+    });
+  });
+
+  /* ---------- phone menu ---------- */
+  var menu = document.querySelector(".menu"), nav = document.getElementById("nav");
+  if (menu) {
+    menu.addEventListener("click", function () {
+      var open = menu.getAttribute("aria-expanded") !== "true";
+      menu.setAttribute("aria-expanded", open ? "true" : "false");
+      nav.classList.toggle("is-open", open);
+    });
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) { menu.setAttribute("aria-expanded", "false"); nav.classList.remove("is-open"); }
+    });
+  }
 
   /* ---------- header shadow once you scroll ---------- */
   var top = document.querySelector(".top");
