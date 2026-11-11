@@ -8,7 +8,8 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon-1.png">
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="v3.css?v=5">
+  <link rel="stylesheet" href="../assets/motion.css?v=7">
+  <link rel="stylesheet" href="v3.css?v=6">
 </head>
 <body>
 
@@ -39,7 +40,7 @@
       <a href="#faq">FAQ</a>
     </nav>
     <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button><button type="button" data-lang="zh" aria-pressed="false" lang="zh-Hans">中文</button></div>
-    <a class="btn btn--sm top__cta" href="#contact">Talk to us</a>
+    <a class="btn btn--sm btn--color top__cta" href="#contact" data-cta="fruit" data-fruit="1"><span>Talk to us</span></a>
     <button class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
@@ -54,8 +55,8 @@
         <h1>ABA in every <span class="hl">color, beat, and shape.</span></h1>
         <p class="hero__sub">In-home naturalistic therapy, taught through music, paint, dance, theater, and whatever creative channels your child desires.</p>
         <div class="btn-row">
-          <a class="btn" href="#contact">Talk to us</a>
-          <a class="btn btn--ghost" href="#loves">See how it works</a>
+          <a class="btn" href="#contact" data-cta="fruit" data-fruit="3"><span>Talk to us</span></a>
+          <a class="link" href="#loves">See how it works <span aria-hidden="true">↓</span></a>
         </div>
         <ul class="assure">
           <li>BCBA-led</li><li>In your home or by telehealth</li><li>Help checking your insurance</li>
@@ -126,44 +127,39 @@
       </div>
     </div>
 
-    <div class="wrap strip" data-reveal>
-      <p>Joining these insurance networks</p>
-      <ul>
-        <li>Aetna</li><li>Blue Cross Blue Shield of Texas</li><li>Cigna</li><li>Molina</li><li>Superior HealthPlan</li><li>UnitedHealthcare</li><li>Wellpoint</li>
-      </ul>
-    </div>
   </section>
 
   <!-- ===== APPROACH ===== -->
   <section class="sec" id="approach">
-    <div class="wrap split">
-      <div class="split__text" data-reveal>
-        <p class="eyebrow"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Our approach</p>
-        <h2>Play is how we <span class="hl">teach.</span></h2>
-        <p>ABA (Applied Behavior Analysis) is one of the most researched ways to help children build communication, social, and everyday skills.</p>
-        <p>Ours is naturalistic and play-based, informed by NET, PRT, and ESDM. Learning happens inside real play and daily routines, so new skills carry over to real life.</p>
-      </div>
-      <div class="compare" data-reveal="2">
-        <div class="compare__head"><span>Instead of</span><span>We use</span></div>
-        <ul>
-          <li><s>Drills</s><span>Drum solos</span></li>
-          <li><s>Flash cards</s><span>Finger paint</span></li>
-          <li><s>Table time</s><span>Stage time</span></li>
-          <li><s>Sit still</s><span>Dance it out</span></li>
-        </ul>
-        <p class="compare__foot">Same goals. Same data. More play.</p>
-      </div>
-    </div>
-
     <div class="wrap">
-      <ul class="checks" data-reveal>
-        <li>Individual plan for your child</li>
-        <li>Led by a BCBA</li>
-        <li>Clear, measurable goals</li>
-        <li>Progress you can see</li>
-        <li>Parent coaching included</li>
-        <li>Sessions in your home</li>
-      </ul>
+      <div class="aba" data-reveal>
+        <div class="aba__main">
+          <p class="eyebrow"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Our ABA</p>
+          <h2 class="glitter">Same goals.<br>Same data.<br><span>Way more glitter.</span></h2>
+          <p class="aba__lead">ABA (Applied Behavior Analysis) is one of the most researched ways to help children build communication, social, and everyday skills. Ours is naturalistic and play-based, informed by NET, PRT, and ESDM.</p>
+          <p class="aba__label">What you can count on</p>
+          <ul class="kw">
+            <li class="kw--line">Individual plan</li>
+            <li class="kw--yellow">BCBA-led</li>
+            <li class="kw--line">Clear goals</li>
+            <li class="kw--orange">Progress you can see</li>
+            <li class="kw--line">Parent coaching</li>
+            <li class="kw--peach">Play-based</li>
+            <li class="kw--line">Evidence-based</li>
+            <li class="kw--sage">Naturalistic</li>
+            <li class="kw--pink">In your home</li>
+          </ul>
+        </div>
+        <div class="aba__changes">
+          <p class="aba__label">What changes</p>
+          <ul class="changes">
+            <li><s>Drills</s> <span>Drum solos</span></li>
+            <li><s>Flash cards</s> <span>Finger paint</span></li>
+            <li><s>Table time</s> <span>Stage time</span></li>
+            <li><s>Sit still</s> <span>Dance it out</span></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="wrap how">
@@ -188,39 +184,30 @@
     </div>
   </section>
 
-  <!-- ===== COMMUNITY: tabs ===== -->
-  <section class="sec sec--band" id="community">
+  <!-- ===== COMMUNITY ===== -->
+  <section class="sec" id="community">
     <div class="wrap">
-      <div class="head" data-reveal>
-        <p class="eyebrow"><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">Community days</p>
-        <h2>Once a month, we take learning out into the world.</h2>
-        <p>Kids try something new and practice social skills in real places, with our RBTs right there to support them.</p>
-      </div>
-      <div class="tabs" data-tabs data-reveal>
-        <div class="tabs__list" role="tablist" aria-label="Community days">
-          <button role="tab" id="t-1" aria-controls="p-1" aria-selected="true">
-            <strong>Artist-led workshops</strong>
-            <span>Local artists host hands-on sessions in painting, making, and building. Kids create side by side, share materials, and take turns.</span>
-          </button>
-          <button role="tab" id="t-2" aria-controls="p-2" aria-selected="false">
-            <strong>Field trips</strong>
-            <span>Dance studios, museums, and other places around town. New places are a chance to practice flexibility, waiting, and asking for help.</span>
-          </button>
-          <button role="tab" id="t-3" aria-controls="p-3" aria-selected="false">
-            <strong>Open house for new families</strong>
-            <span>Bring your child, meet the team, and see how we work, with no commitment.</span>
-          </button>
-          <p class="tabs__note">For children in our program who are ready for group activities, and for families who'd like to get to know us.</p>
+      <div class="comm">
+        <div class="comm__text" data-reveal>
+          <p class="eyebrow"><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">Community days</p>
+          <h2>Once a month, we take learning out into the world.</h2>
+          <p class="comm__lead">Kids get together, try something new, and practice social skills in real places, with our RBTs right there to support them.</p>
+          <ul class="outings">
+            <li><img src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true"><div><h3>Artist-led workshops</h3><p>Local artists host hands-on sessions in painting, making, and building.</p></div></li>
+            <li><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true"><div><h3>Field trips</h3><p>Dance studios, museums, and other places around town, explored together.</p></div></li>
+            <li><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true"><div><h3>Open house for new families</h3><p>Curious about our program? Come meet the team and see how we work.</p></div></li>
+          </ul>
+          <p class="comm__who">Community days are for children in our program who are ready for group activities, and for families who'd like to get to know us.</p>
+          <a class="btn" href="#contact" data-cta="fruit" data-fruit="2"><span>Ask about the next event</span></a>
         </div>
-        <div class="tabs__media">
-          <img role="tabpanel" id="p-1" aria-labelledby="t-1" src="../assets/img/photos/painting-table.jpg" alt="A child painting at the kitchen table">
-          <img role="tabpanel" id="p-2" aria-labelledby="t-2" src="../assets/img/v3/community.jpg" alt="Kids running together through a field" hidden>
-          <img role="tabpanel" id="p-3" aria-labelledby="t-3" src="../assets/img/v3/paper.jpg" alt="A child and therapist playing together at home" hidden>
+        <div class="comm__art" data-reveal="2">
+          <div class="comm__arch"></div>
+          <img class="cut comm__kids" src="../assets/img/cutouts/running-kids.png" alt="A group of kids running together through a field">
+          <div class="stamp" aria-hidden="true"><span>Every</span><b>month</b></div>
           <div class="next">
-            <p class="next__label">Next community day</p>
+            <p class="next__label">Next up</p>
             <p class="next__name todo">Event name</p>
             <p class="next__meta todo">Date · Dallas or Austin</p>
-            <a class="btn btn--sm" href="#contact">Ask about it</a>
           </div>
         </div>
       </div>
@@ -272,7 +259,7 @@
   </section>
 
   <!-- ===== LOCATIONS + INSURANCE ===== -->
-  <section class="sec sec--compact sec--line" id="places">
+  <section class="sec sec--compact" id="places">
     <div class="wrap">
       <div class="head" data-reveal>
         <p class="eyebrow"><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">Where we work</p>
@@ -298,12 +285,13 @@
 
       <!-- INSURANCE: network applications in progress. Edit as plans are confirmed. -->
       <div class="ins" data-reveal>
-        <div>
-          <h3>Insurance</h3>
+        <div class="ins__text">
+          <p class="eyebrow"><img src="../assets/img/shapes/red.svg?v=4" alt="" aria-hidden="true">Insurance</p>
+          <h3>Insurance networks</h3>
           <p>We're in the process of joining these networks. Send us your plan name and we'll help you check your coverage.</p>
-          <a class="btn btn--ghost btn--sm" href="#contact">Check your coverage</a>
+          <a class="btn" href="#contact" data-cta="fruit" data-fruit="4"><span>Check your coverage</span></a>
         </div>
-        <ul>
+        <ul class="ins__list">
           <li>Molina Healthcare of Texas</li>
           <li>Wellpoint</li>
           <li>Aetna Better Health of Texas</li>
@@ -369,7 +357,7 @@
           <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
           <label><span>Where are you?</span><select name="area"><option>Dallas area</option><option>Austin area</option><option>Elsewhere in Texas</option></select></label>
           <label><span>I'm reaching out as</span><select name="role"><option>A parent or caregiver</option><option>A potential team member</option><option>Interested in community events</option><option>A referral partner</option><option>Something else</option></select></label>
-          <button class="btn" type="submit">Send</button>
+          <button class="btn btn--color" type="submit" data-cta="fruit" data-fruit="3"><span>Send</span></button>
           <p class="form__note" id="form-note" role="status"></p>
         </form>
       </div>
@@ -473,6 +461,7 @@
 
 <script src="../assets/i18n-strings.js?v=7"></script>
 <script src="../assets/i18n.js?v=1"></script>
-<script src="v3.js?v=3"></script>
+<script src="../assets/motion.js?v=3"></script>
+<script src="v3.js?v=4"></script>
 </body>
 </html>

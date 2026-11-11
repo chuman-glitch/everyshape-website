@@ -122,6 +122,12 @@
     });
   }
 
+  /* ---------- playful layer from version 1: fruit buttons, cursor, magnetic hover ---------- */
+  document.querySelectorAll(".btn").forEach(function (b) { b.setAttribute("data-magnetic", "0.25"); });
+  document.querySelectorAll(".card, .love__tabs [role=tab]").forEach(function (b) { b.setAttribute("data-cursor", "Open"); });
+  document.querySelectorAll(".person").forEach(function (b) { b.setAttribute("data-cursor", "Hi"); });
+  if (window.ESMotion) window.ESMotion.init();
+
   /* ---------- header shadow once you scroll ---------- */
   var top = document.querySelector(".top");
   window.addEventListener("scroll", function () { top.classList.toggle("is-scrolled", window.scrollY > 8); }, { passive: true });
