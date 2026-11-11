@@ -538,3 +538,88 @@ h3 { font-size: 1.12rem; }
   .ins__list { grid-template-columns: minmax(0, 1fr); }
   .hero__photo::before { right: -8px; top: -14px; }
 }
+
+/* ============================================================
+   ROUND 4 — one system for everything.
+   Shared sizes: controls 40px (small) / 50px (regular), corners 12px,
+   panels 24px. Shared motif: a dotted line. Gentle motion only.
+   ============================================================ */
+:root {
+  --ctl-sm: 40px; --ctl: 50px; --r-ctl: 12px; --r-panel: 24px;
+  --dots: radial-gradient(circle, rgba(24, 22, 20, .32) 1.1px, transparent 1.6px);
+  --dash: rgba(24, 22, 20, .35);
+}
+
+/* buttons and the language toggle share height and corners */
+.btn { height: var(--ctl); padding: 0 22px; border-radius: var(--r-ctl); font-size: .98rem; }
+.btn::before, .btn::after { border-radius: var(--r-ctl); }
+.btn::before { transform: translate(4px, 4px); }
+.btn:hover::after { transform: translate(-2px, -2px); }
+.btn:hover::before { transform: translate(5px, 5px); }
+.btn::after { box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn .cta-fruit { width: 24px; height: 24px; margin: 0 -4px 0 10px; }
+.btn--sm { height: var(--ctl-sm); padding: 0 16px; font-size: .9rem; }
+.btn--sm .cta-fruit { width: 20px; height: 20px; margin: 0 -2px 0 8px; }
+.lang { height: var(--ctl-sm); padding: 4px; gap: 2px; border-radius: var(--r-ctl); background: var(--soft); align-items: stretch; }
+.lang button { padding: 0 10px; border-radius: 8px; font-size: .78rem; display: grid; place-items: center; }
+.menu { width: var(--ctl-sm); height: var(--ctl-sm); border-radius: var(--r-ctl); }
+
+/* hero: button + link sit on one line, link reads as secondary */
+.hero .btn-row { align-items: center; gap: 14px 28px; margin-top: 4px; }
+.link { font-size: .98rem; font-weight: 500; border: 0; padding: 0; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 6px; text-decoration-color: rgba(24, 22, 20, .3); transition: text-decoration-color .2s, color .2s; }
+.link:hover { color: var(--ink); text-decoration-color: var(--accent); }
+.link span { display: inline-block; transition: transform .3s var(--ease); }
+.link:hover span { transform: translateY(3px); }
+.assure { margin-top: 36px; }
+
+/* v1 pieces, retuned to v3 sizes and weights */
+.aba, .comm, .ins, .love__panel, .contact { border-radius: var(--r-panel); }
+.kw li, .chips li { height: 36px; display: inline-flex; align-items: center; padding: 0 14px; font-size: .9rem; font-weight: 500; }
+.kw--line { border: 1.5px dashed var(--dash) !important; }
+.changes li { font-size: clamp(1.25rem, 2vw, 1.65rem); padding: 14px 0; border: 0; background: var(--dots) 0 0 / 8px 3px repeat-x; }
+.changes li:last-child { border: 0; background: var(--dots) 0 0 / 8px 3px repeat-x, var(--dots) 0 100% / 8px 3px repeat-x; }
+.changes s::after { height: 3px; }
+.outings li { border-radius: 14px; background: rgba(255, 255, 255, .85); padding: 14px 18px; }
+.outings h3 { font-weight: 700; }
+.ins__list li { min-height: 52px; border-radius: var(--r-ctl); font-weight: 500; }
+.glitter { font-weight: 700; }
+.aba__label, .love__label { font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* dotted-line motif */
+.hero__photo::after { content: ""; position: absolute; inset: -14px 14px 14px -14px; border: 1.5px dashed var(--dash); border-radius: 30px; z-index: -1; pointer-events: none; }
+.sec--line > .wrap:first-child { border-top: 0; background: var(--dots) 0 0 / 10px 3px repeat-x; }
+.rbts { border-top: 0; background: var(--dots) 0 0 / 10px 3px repeat-x; }
+.next { border: 1.5px dashed var(--dash); box-shadow: 0 12px 28px -14px rgba(24, 22, 20, .25); }
+.love__img { outline: 1.5px dashed var(--dash); outline-offset: 8px; }
+.tile { border-style: solid; }
+.tile img { border-bottom: 0; }
+.steps::before { height: 3px; top: 17px; background: var(--dots) 0 0 / 10px 3px repeat-x; transform-origin: left; transition: transform 1.4s .2s var(--ease); }
+.can-reveal .steps:not(.is-in)::before { transform: scaleX(0); }
+
+/* stamp: dotted ring that slowly turns */
+.stamp { box-shadow: none; }
+.stamp::before { content: ""; position: absolute; inset: 7px; border-radius: 50%; border: 1.5px dashed rgba(24, 22, 20, .55); animation: spin 22s linear infinite; }
+@keyframes spin { to { rotate: 360deg; } }
+
+/* small motion */
+.hero__photo::before { animation: float 7s ease-in-out infinite; }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: -6px 8px; } }
+.eyebrow img { transition: transform .5s var(--ease); }
+.can-reveal [data-reveal].is-in .eyebrow img, .can-reveal .is-in > .eyebrow img { animation: wiggle .9s .3s var(--ease) both; }
+@keyframes wiggle { 0% { transform: scale(.4) rotate(-40deg); } 60% { transform: scale(1.15) rotate(8deg); } 100% { transform: none; } }
+.steps__n { transition: transform .5s var(--ease), background-color .3s, color .3s, border-color .3s; }
+.can-reveal .steps:not(.is-in) .steps__n { transform: scale(.6); }
+.steps li:nth-child(2) .steps__n { transition-delay: .25s; } .steps li:nth-child(3) .steps__n { transition-delay: .5s; } .steps li:nth-child(4) .steps__n { transition-delay: .75s; }
+.steps li:hover .steps__n { background: var(--accent); border-color: var(--accent); color: #fff; }
+.outings li { transition: transform .3s var(--ease); }
+.outings li:hover { transform: translateX(4px); }
+.ins__list li { transition: transform .3s var(--ease), box-shadow .3s; }
+.ins__list li:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -10px rgba(24, 22, 20, .25); }
+.person__photo { transition: box-shadow .3s; }
+
+@media (max-width: 1060px) { .steps::before { display: none; } }
+@media (max-width: 560px) { .hero__photo::after { inset: -10px 10px 10px -10px; } }
+@media (prefers-reduced-motion: reduce) {
+  .stamp::before, .hero__photo::before, .eyebrow img { animation: none !important; }
+  .steps::before, .steps__n { transition: none; transform: none !important; }
+}
