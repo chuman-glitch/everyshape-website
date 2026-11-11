@@ -440,3 +440,9 @@ h3 { font-size: 1.12rem; }
 .tabs__list [role=tab][aria-selected=false] span { display: none; }
 .head--row { max-width: none; }
 .head--row h2 { max-width: 14em; }
+/* hero shows right away with a short fade, no waiting for scroll */
+.hero__text > *, .hero__photo { animation: heroIn .9s var(--ease) both; }
+.hero__text > *:nth-child(2) { animation-delay: .05s; } .hero__text > *:nth-child(3) { animation-delay: .1s; }
+.hero__text > *:nth-child(4), .hero__text > *:nth-child(5) { animation-delay: .15s; } .hero__photo { animation-delay: .12s; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .hero__text > *, .hero__photo { animation: none; } }
