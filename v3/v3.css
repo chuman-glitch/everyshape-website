@@ -315,3 +315,5 @@ p { margin: 0 0 1em; }
   .g, .g__img, .xpanel, .tabs__list [role=tab] span { transition: none; }
   .tabs__media img[role=tabpanel] { animation: none; }
 }
+.g__tag { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.g:not(.is-on) .g__body { padding: 16px; }
