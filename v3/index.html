@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon-1.png">
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="v3.css?v=3">
+  <link rel="stylesheet" href="v3.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
       <img src="../assets/img/logo-primary-tight.png" alt="Every Shape" width="820" height="270">
     </a>
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="#approach">Approach</a>
+      <a href="#loves">Approach</a>
       <a href="#community">Community</a>
       <a href="#team">Team</a>
       <a href="#places">Locations</a>
@@ -48,56 +48,86 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="wrap">
-      <p class="pill" data-reveal><img src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true">Art-based ABA therapy in Texas</p>
-      <h1 data-reveal>ABA in every <span class="hl">color, beat, and shape.</span></h1>
-      <p class="hero__sub" data-reveal="2">In-home naturalistic therapy, taught through music, paint, dance, theater, and whatever creative channels your child desires.</p>
-      <div class="btn-row btn-row--center" data-reveal="3">
-        <a class="btn" href="#contact">Talk to us</a>
-        <a class="btn btn--ghost" href="#approach">See how it works</a>
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="pill" data-reveal><img src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true">Art-based ABA therapy in Texas</p>
+        <h1 data-reveal>ABA in every <span class="hl">color, beat, and shape.</span></h1>
+        <p class="hero__sub" data-reveal="2">In-home naturalistic therapy, taught through music, paint, dance, theater, and whatever creative channels your child desires.</p>
+        <div class="btn-row" data-reveal="3">
+          <a class="btn" href="#contact">Talk to us</a>
+          <a class="btn btn--ghost" href="#loves">See how it works</a>
+        </div>
+        <ul class="assure" data-reveal="3">
+          <li>BCBA-led</li><li>In your home or by telehealth</li><li>Help checking your insurance</li>
+        </ul>
       </div>
+      <figure class="hero__photo" data-reveal="2">
+        <img src="../assets/img/v3/home.jpg" alt="A child painting a little world with a therapist at home">
+        <figcaption><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true"><span><b>Dallas, Austin, and rural Texas</b>Sessions where your child feels at home.</span></figcaption>
+      </figure>
     </div>
+  </section>
 
-    <!-- Four ways in: hover or tap a photo to open it -->
+  <!-- ===== WHAT YOUR CHILD LOVES: pick an interest to see how we teach through it ===== -->
+  <section class="sec" id="loves">
     <div class="wrap">
-      <div class="gallery" data-reveal="3">
-        <button class="g is-on" type="button" aria-expanded="true">
-          <img class="g__img" src="../assets/img/v3/dance.jpg" alt="A child dancing in the living room">
-          <span class="g__body">
-            <span class="g__tag"><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">Dance</span>
-            <span class="g__line">Copy the move. Then teach it to us.</span>
-            <span class="g__builds">Builds imitation, body awareness, and joint attention.</span>
-          </span>
-        </button>
-        <button class="g" type="button" aria-expanded="false">
-          <img class="g__img" src="../assets/img/v3/art.jpg" alt="A child painting at an easel while a therapist holds the paint pots">
-          <span class="g__body">
-            <span class="g__tag"><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">Visual arts</span>
-            <span class="g__line">Need the blue crayon? Ask for the blue crayon.</span>
-            <span class="g__builds">Builds asking for help, following directions, and fine motor skills.</span>
-          </span>
-        </button>
-        <button class="g" type="button" aria-expanded="false">
-          <img class="g__img" src="../assets/img/v3/music.jpg" alt="A child and an adult dancing to music at home">
-          <span class="g__body">
-            <span class="g__tag"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Music</span>
-            <span class="g__line">The song stops. Your child asks for more. That's a goal, met.</span>
-            <span class="g__builds">Builds requesting, turn-taking, and waiting.</span>
-          </span>
-        </button>
-        <button class="g" type="button" aria-expanded="false">
-          <img class="g__img" src="../assets/img/v3/theater.jpg" alt="A child and an adult playing with hand puppets in a blanket fort">
-          <span class="g__body">
-            <span class="g__tag"><img src="../assets/img/shapes/red.svg?v=4" alt="" aria-hidden="true">Theater</span>
-            <span class="g__line">The puppet is sad. What should we do?</span>
-            <span class="g__builds">Builds emotions, conversation, and pretend play.</span>
-          </span>
-        </button>
+      <div class="head head--center" data-reveal>
+        <p class="eyebrow"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Start with what your child loves</p>
+        <h2>Their interests are where learning begins.</h2>
+        <p>Choose one to see how a session might look.</p>
+      </div>
+      <div class="love" data-tabs data-reveal>
+        <div class="love__tabs" role="tablist" aria-label="Your child's interests">
+          <button role="tab" id="lt-1" aria-controls="lp-1" aria-selected="true"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true"><span>Music</span></button>
+          <button role="tab" id="lt-2" aria-controls="lp-2" aria-selected="false"><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true"><span>Visual arts</span></button>
+          <button role="tab" id="lt-3" aria-controls="lp-3" aria-selected="false"><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true"><span>Dance</span></button>
+          <button role="tab" id="lt-4" aria-controls="lp-4" aria-selected="false"><img src="../assets/img/shapes/red.svg?v=4" alt="" aria-hidden="true"><span>Theater</span></button>
+        </div>
+        <div class="love__panel love__panel--pink" role="tabpanel" id="lp-1" aria-labelledby="lt-1">
+          <div class="love__text">
+            <p class="love__if">If your child loves music</p>
+            <h3>The song stops. Your child asks for more. That's a goal, met.</h3>
+            <p>Songs, rhythms, and instruments give natural pauses. Each pause is a chance to ask, wait, or take a turn, and the music itself is the reward.</p>
+            <p class="love__label">What it builds</p>
+            <ul class="chips"><li>Requesting</li><li>Turn-taking</li><li>Waiting</li></ul>
+          </div>
+          <img class="love__img" src="../assets/img/v3/music.jpg" alt="A child and an adult dancing to music at home">
+        </div>
+        <div class="love__panel love__panel--yellow" role="tabpanel" id="lp-2" aria-labelledby="lt-2" hidden>
+          <div class="love__text">
+            <p class="love__if">If your child loves drawing and painting</p>
+            <h3>Need the blue crayon? Ask for the blue crayon.</h3>
+            <p>Painting, drawing, and making give lots of small moments to ask for help, follow a step, and practice hand skills, while making something your child is proud of.</p>
+            <p class="love__label">What it builds</p>
+            <ul class="chips"><li>Asking for help</li><li>Following directions</li><li>Fine motor</li></ul>
+          </div>
+          <img class="love__img" src="../assets/img/v3/art.jpg" alt="A child painting at an easel while a therapist holds the paint pots">
+        </div>
+        <div class="love__panel love__panel--sage" role="tabpanel" id="lp-3" aria-labelledby="lt-3" hidden>
+          <div class="love__text">
+            <p class="love__if">If your child loves moving and dancing</p>
+            <h3>Copy the move. Then teach it to us.</h3>
+            <p>Movement games build imitation and body awareness. When your child leads the next move, they practice sharing attention with someone else.</p>
+            <p class="love__label">What it builds</p>
+            <ul class="chips"><li>Imitation</li><li>Body awareness</li><li>Joint attention</li></ul>
+          </div>
+          <img class="love__img" src="../assets/img/v3/dance.jpg" alt="A child dancing in the living room">
+        </div>
+        <div class="love__panel love__panel--red" role="tabpanel" id="lp-4" aria-labelledby="lt-4" hidden>
+          <div class="love__text">
+            <p class="love__if">If your child loves pretend play</p>
+            <h3>The puppet is sad. What should we do?</h3>
+            <p>Puppets and pretend play make feelings easier to talk about. Kids practice naming emotions, back-and-forth conversation, and solving small problems.</p>
+            <p class="love__label">What it builds</p>
+            <ul class="chips"><li>Emotions</li><li>Conversation</li><li>Pretend play</li></ul>
+          </div>
+          <img class="love__img" src="../assets/img/v3/theater.jpg" alt="A child and an adult playing with hand puppets in a blanket fort">
+        </div>
       </div>
     </div>
 
     <div class="wrap strip" data-reveal>
-      <p>BCBA-led care, at home or by telehealth.<br>Joining these insurance networks:</p>
+      <p>Joining these insurance networks</p>
       <ul>
         <li>Aetna</li><li>Blue Cross Blue Shield of Texas</li><li>Cigna</li><li>Molina</li><li>Superior HealthPlan</li><li>UnitedHealthcare</li><li>Wellpoint</li>
       </ul>
@@ -159,14 +189,14 @@
   </section>
 
   <!-- ===== COMMUNITY: tabs ===== -->
-  <section class="sec sec--soft" id="community">
+  <section class="sec sec--band" id="community">
     <div class="wrap">
       <div class="head" data-reveal>
         <p class="eyebrow"><img src="../assets/img/shapes/sage.svg?v=4" alt="" aria-hidden="true">Community days</p>
         <h2>Once a month, we take learning out into the world.</h2>
         <p>Kids try something new and practice social skills in real places, with our RBTs right there to support them.</p>
       </div>
-      <div class="tabs" data-reveal>
+      <div class="tabs" data-tabs data-reveal>
         <div class="tabs__list" role="tablist" aria-label="Community days">
           <button role="tab" id="t-1" aria-controls="p-1" aria-selected="true">
             <strong>Artist-led workshops</strong>
@@ -242,7 +272,7 @@
   </section>
 
   <!-- ===== LOCATIONS + INSURANCE ===== -->
-  <section class="sec sec--soft" id="places">
+  <section class="sec sec--compact sec--line" id="places">
     <div class="wrap">
       <div class="head" data-reveal>
         <p class="eyebrow"><img src="../assets/img/shapes/yellow.svg?v=4" alt="" aria-hidden="true">Where we work</p>
@@ -288,7 +318,7 @@
   </section>
 
   <!-- ===== GETTING STARTED (please review these steps) ===== -->
-  <section class="sec" id="start">
+  <section class="sec sec--compact" id="start">
     <div class="wrap">
       <div class="head" data-reveal>
         <p class="eyebrow"><img src="../assets/img/shapes/orange.svg?v=4" alt="" aria-hidden="true">Getting started</p>
@@ -304,7 +334,7 @@
   </section>
 
   <!-- ===== FAQ ===== -->
-  <section class="sec sec--soft" id="faq">
+  <section class="sec sec--line" id="faq">
     <div class="wrap faq">
       <div data-reveal>
         <p class="eyebrow"><img src="../assets/img/shapes/pink.svg?v=4" alt="" aria-hidden="true">Questions</p>
@@ -443,6 +473,6 @@
 
 <script src="../assets/i18n-strings.js?v=7"></script>
 <script src="../assets/i18n.js?v=1"></script>
-<script src="v3.js?v=2"></script>
+<script src="v3.js?v=3"></script>
 </body>
 </html>

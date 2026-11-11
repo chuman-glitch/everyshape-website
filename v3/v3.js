@@ -87,34 +87,25 @@
     }, 150);
   });
 
-  /* ---------- hero gallery: hover or tap a photo to open it ---------- */
-  var gs = Array.prototype.slice.call(document.querySelectorAll(".g"));
-  function pick(g) {
-    gs.forEach(function (x) { var on = x === g; x.classList.toggle("is-on", on); x.setAttribute("aria-expanded", on ? "true" : "false"); });
-  }
-  gs.forEach(function (g) {
-    g.addEventListener("click", function () { pick(g); });
-    g.addEventListener("mouseenter", function () { if (window.matchMedia("(hover: hover) and (min-width: 821px)").matches) pick(g); });
-    g.addEventListener("focus", function () { pick(g); });
-  });
-
-  /* ---------- community tabs ---------- */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabs [role=tab]"));
-  function sel(t) {
-    tabs.forEach(function (x) {
-      var on = x === t;
-      x.setAttribute("aria-selected", on ? "true" : "false");
-      x.tabIndex = on ? 0 : -1;
-      document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
-    });
-  }
-  tabs.forEach(function (t, i) {
-    t.tabIndex = i ? -1 : 0;
-    t.addEventListener("click", function () { sel(t); });
-    t.addEventListener("keydown", function (e) {
-      var d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
-      if (!d) return; e.preventDefault();
-      var n = tabs[(i + d + tabs.length) % tabs.length]; sel(n); n.focus();
+  /* ---------- tabs (interests + community) ---------- */
+  document.querySelectorAll("[data-tabs]").forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll("[role=tab]"));
+    function sel(t) {
+      tabs.forEach(function (x) {
+        var on = x === t;
+        x.setAttribute("aria-selected", on ? "true" : "false");
+        x.tabIndex = on ? 0 : -1;
+        document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.tabIndex = i ? -1 : 0;
+      t.addEventListener("click", function () { sel(t); });
+      t.addEventListener("keydown", function (e) {
+        var d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+        if (!d) return; e.preventDefault();
+        var n = tabs[(i + d + tabs.length) % tabs.length]; sel(n); n.focus();
+      });
     });
   });
 
