@@ -69,13 +69,14 @@ a { color: inherit; }
 
 /* ---------- placeholders ---------- */
 .todo { background: rgba(245, 199, 66, .45); outline: 1px dotted rgba(42, 37, 35, .35); outline-offset: 2px; border-radius: 4px; }
-/* clinical wording for the Clinical Director: dashed box + "CD" tag */
-.todo.cd { background: rgba(255, 255, 255, .7); outline: 1.5px dashed var(--orange); }
-.todo.cd::before {
-  content: "CD"; display: inline-block; margin-right: 6px; padding: 0 5px; vertical-align: .12em;
-  border-radius: 4px; background: var(--orange); color: #fff;
-  font: 800 .62rem/1.5 var(--font-head); letter-spacing: .06em; text-decoration: none;
-}
+/* clinical wording for the Clinical Director: looks like normal text,
+   marked only by a soft dotted underline and a tiny "CD" note,
+   so swapping in the real words won't change the layout */
+.todo.cd { background: none; outline: none; border-radius: 0; color: inherit; opacity: .62;
+  text-decoration: underline dotted rgba(233, 110, 53, .8); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.todo.cd::after { content: "CD"; margin-left: .3em; vertical-align: super; font: 800 .55rem/1 var(--font-head); letter-spacing: .06em; color: var(--orange); opacity: .9; text-decoration: none; display: inline-block; }
+.sheet--orange .todo.cd { text-decoration-color: rgba(42, 37, 35, .55); }
+.sheet--orange .todo.cd::after { color: var(--ink); }
 
 /* ---------- header ---------- */
 .site-header {
