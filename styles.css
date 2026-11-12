@@ -193,8 +193,7 @@ a { color: inherit; }
 .compare__row { padding: 16px 0; border-top: 2px dotted var(--dash); }
 .compare__row:last-child { border-bottom: 2px dotted var(--dash); }
 .compare__row > span { font: 700 .82rem/1.3 var(--font-head); letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); }
-.compare s { justify-self: start; }
-.compare s > span, .compare s:not(:has(span)) { text-decoration: none; color: rgba(42, 37, 35, .5); font-weight: 600; font-size: 1rem; }
+.compare s { justify-self: start; text-decoration: none; color: rgba(42, 37, 35, .55); font-weight: 600; font-size: 1rem; line-height: 1.5; }
 .compare s:not(.todo) {           /* red cross-out that draws in, on every line of the text */
   background: linear-gradient(var(--red), var(--red)) 0 56% / 100% 2.5px no-repeat;
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
