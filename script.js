@@ -36,6 +36,52 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   });
 })();
 
+// Curriculum: pick an interest, light up the skills it builds
+(function () {
+  var box = document.querySelector("[data-ways]");
+  if (!box) return;
+  var ways = Array.prototype.slice.call(box.querySelectorAll(".way"));
+  var says = box.querySelectorAll(".way__say p");
+  var say = box.querySelector(".way__say");
+  var skills = box.querySelectorAll(".skill");
+  var tint = { pink: "var(--t-pink)", yellow: "var(--t-yellow)", sage: "var(--t-sage)", red: "var(--t-red)" };
+  function pick(w) {
+    var i = ways.indexOf(w), keys = (w.getAttribute("data-skills") || "").split(" ");
+    var t = tint[w.getAttribute("data-color")] || tint.pink;
+    ways.forEach(function (x) { var on = x === w; x.setAttribute("aria-selected", on ? "true" : "false"); x.tabIndex = on ? 0 : -1; });
+    says.forEach(function (p, j) { p.hidden = j !== i; });
+    say.style.backgroundColor = t;
+    skills.forEach(function (s) {
+      var on = keys.indexOf(s.getAttribute("data-skill")) > -1;
+      s.classList.toggle("is-on", on);
+      s.style.setProperty("--t", t);
+    });
+    box.classList.add("has-pick");
+  }
+  ways.forEach(function (w, i) {
+    w.addEventListener("click", function () { pick(w); });
+    w.addEventListener("keydown", function (e) {
+      var d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return; e.preventDefault();
+      var n = ways[(i + d + ways.length) % ways.length]; pick(n); n.focus();
+    });
+  });
+  pick(ways[0]);
+})();
+
+// Header: underline the section you're reading
+(function () {
+  var links = document.querySelectorAll(".site-nav a");
+  if (!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      links.forEach(function (a) { a.classList.toggle("is-here", a.getAttribute("href") === "#" + en.target.id); });
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  document.querySelectorAll("main section[id]").forEach(function (s) { io.observe(s); });
+})();
+
 // Motion: magnetic buttons, custom cursor, parallax stickers, reveal on scroll
 (function () {
   function mark(sel, attr, val) {
@@ -43,17 +89,14 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       el.setAttribute(attr, typeof val === "function" ? val(i) : val);
     });
   }
-  mark(".paper-btn, .site-nav a", "data-magnetic", "0.3");
+  mark(".paper-btn", "data-magnetic", "0.3");
   mark(".brand", "data-magnetic", "0.15");
   mark(".frame--pill", "data-speed", function (i) { return i % 2 ? "-0.08" : "0.1"; });
   mark(".frame--pop img", "data-speed", "-0.05");
-  mark(".trains__kid, .places__kid", "data-speed", "0.12");
-  mark(".duo__chair, .community__kids", "data-speed", "-0.1");
-  mark(".duo__a", "data-speed", "0.05");
-  mark(".duo__b", "data-speed", "-0.07");
-  mark(".motif", "data-speed", function (i) { return i % 2 ? "-0.25" : "0.2"; });
-  mark(".sheet h2, .founder, .rbt, .place, .outing, .way, .changes li, .how2__list li", "data-reveal", function (i) { return String((i % 3) + 1); });
-  mark(".founder, .rbt", "data-cursor", "Hi");
+  mark(".svc__kid", "data-speed", "0.1");
+  mark(".sheet h2, .founder, .skill", "data-reveal", function (i) { return String((i % 3) + 1); });
+  mark(".founder", "data-cursor", "Hi");
+  mark(".way", "data-cursor", "Pick");
   mark(".faq-q", "data-cursor", "Ask");
   if (window.ESMotion) window.ESMotion.init();
 })();
