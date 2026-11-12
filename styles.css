@@ -519,3 +519,24 @@ a { color: inherit; }
   .start span { font-size: .92rem; }
   .paper-form { padding: 22px 18px; }
 }
+
+/* ---------- phones: curriculum picker fits on one screen ----------
+   interests (2x2) → skills (2x2, compact) → the example line,
+   so tapping an interest shows its skills right underneath */
+@media (max-width: 520px) {
+  .cur { display: flex; flex-direction: column; gap: 0; }
+  .cur__ways, .cur__skills { display: contents; }
+  .cur__ways .sub { order: 1; }
+  .ways { order: 2; gap: 8px; }
+  .cur__skills .sub { order: 3; margin-top: 20px; margin-bottom: 10px; }
+  .skills { order: 4; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .way__say { order: 5; margin-top: 12px; min-height: 0; padding: 14px 16px; }
+  .way__say p { font-size: 1rem; }
+  .way { height: 48px; border-radius: 12px; }
+  .way .shp { width: 22px; height: 22px; }
+  .skill { padding: 12px 12px 10px; border-radius: 12px; }
+  .skill h3 { font-size: .92rem; margin-bottom: .3em; padding-right: 18px; }
+  .skill p { font-size: .8rem; line-height: 1.35; }
+  .skill::after { width: 18px; height: 18px; right: 8px; top: 10px; font-size: .6rem; }
+  .skill.is-on { transform: none; }
+}
