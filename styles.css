@@ -530,7 +530,7 @@ a { color: inherit; }
   .ways { order: 2; gap: 8px; }
   .cur__skills .sub { order: 3; margin-top: 20px; margin-bottom: 10px; }
   .skills { order: 4; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .way__say { order: 5; margin-top: 12px; min-height: 0; padding: 14px 16px; }
+  .way__say { order: 5; width: 100%; margin-top: 12px; min-height: 0; padding: 14px 16px; }
   .way__say p { font-size: 1rem; }
   .way { height: 48px; border-radius: 12px; }
   .way .shp { width: 22px; height: 22px; }
