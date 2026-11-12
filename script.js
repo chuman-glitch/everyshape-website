@@ -22,7 +22,16 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
     });
     bubble.setAttribute("data-color", tab.getAttribute("data-color") || "pink");
+    place(tab);
   }
+  // On phones the answer opens right under its question; on wider screens it sits beside the list
+  var home = bubble.parentElement, phone = window.matchMedia("(max-width: 520px)");
+  function place(tab) {
+    if (phone.matches) tab.after(bubble);
+    else if (bubble.parentElement !== home) home.appendChild(bubble);
+  }
+  phone.addEventListener("change", function () { place(tabs.filter(function (t) { return t.getAttribute("aria-selected") === "true"; })[0] || tabs[0]); });
+  place(tabs[0]);
   tabs.forEach(function (tab, i) {
     tab.tabIndex = i === 0 ? 0 : -1;
     tab.addEventListener("click", function () { select(tab); });
