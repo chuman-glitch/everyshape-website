@@ -14,7 +14,7 @@
   var LANGS = ["en", "es", "zh"];
   var HTML_LANG = { en: "en", es: "es", zh: "zh-Hans" };
   var COL = { es: 0, zh: 1 };
-  var SKIP = "script, style, svg, template, .todo, [data-no-i18n], .lang";
+  var SKIP = "script, style, svg, template, [data-no-i18n], .lang";
   var originals = new WeakMap();
   var current = "en";
 
