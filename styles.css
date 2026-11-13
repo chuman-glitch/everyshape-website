@@ -546,7 +546,7 @@ a { color: inherit; }
    normal = the yellow shape · link = the shape as a ring · click = a little burst */
 @media (hover: hover) and (pointer: fine) {
   html { cursor: url("assets/img/cursors/shape.svg") 10 10, auto; }
-  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/link.svg") 15 15, pointer !important; }
+  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/link.svg?v=2") 11 11, pointer !important; }
   :active { cursor: url("assets/img/cursors/click.svg") 15 15, pointer !important; }
   input, textarea { cursor: text !important; }
 }
