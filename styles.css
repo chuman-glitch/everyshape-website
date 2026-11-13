@@ -542,10 +542,12 @@ a { color: inherit; }
 }
 
 /* ---------- cursor: drawn by the browser, so it never lags ----------
-   the yellow brand shape, which turns into a pale yellow pointing hand
-   over anything you can click */
+   one brand shape, three states:
+   normal = the yellow shape · link = the shape as a ring · click = a little burst */
 @media (hover: hover) and (pointer: fine) {
   html { cursor: url("assets/img/cursors/shape.svg") 10 10, auto; }
-  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/point.svg?v=5") 9 2, pointer !important; }
-  input, textarea { cursor: text; }
+  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/link.svg") 15 15, pointer !important; }
+  :active { cursor: url("assets/img/cursors/click.svg") 15 15, pointer !important; }
+  input, textarea { cursor: text !important; }
+}
 }
