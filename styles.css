@@ -542,10 +542,10 @@ a { color: inherit; }
 }
 
 /* ---------- cursor: drawn by the browser, so it never lags ----------
-   the yellow brand shape, which turns into an orange paper hand
+   the yellow brand shape, which turns into a yellow pointing hand
    over anything you can click */
 @media (hover: hover) and (pointer: fine) {
   html { cursor: url("assets/img/cursors/shape.svg") 10 10, auto; }
-  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/point.svg?v=3") 8 2, pointer !important; }
+  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/point.svg?v=4") 9 2, pointer !important; }
   input, textarea { cursor: text; }
 }
