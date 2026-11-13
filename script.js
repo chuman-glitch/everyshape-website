@@ -107,5 +107,5 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   mark(".founder", "data-cursor", "Hi");
   mark(".way", "data-cursor", "Pick");
   mark(".faq-q", "data-cursor", "Ask");
-  if (window.ESMotion) window.ESMotion.init();
+  if (window.ESMotion) window.ESMotion.init({ cursor: false });   // v1 uses the lighter native cursor in styles.css
 })();

@@ -212,7 +212,7 @@
     reduce: reduce,
     init: function (opts) {
       opts = opts || {};
-      initCursor();
+      if (opts.cursor !== false) initCursor();
       initCTA();
       initMagnetic();
       initParallax(opts.scroller);
