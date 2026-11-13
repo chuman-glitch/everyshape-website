@@ -546,6 +546,6 @@ a { color: inherit; }
    over anything you can click */
 @media (hover: hover) and (pointer: fine) {
   html { cursor: url("assets/img/cursors/arrow.svg?v=2") 3 2, auto; }
-  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/point.svg?v=2") 11 11, pointer !important; }
+  a, button, select, summary, label, [role="tab"], [data-cursor] { cursor: url("assets/img/cursors/point.svg?v=3") 8 2, pointer !important; }
   input, textarea { cursor: text; }
 }
