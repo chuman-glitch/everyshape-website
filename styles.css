@@ -551,3 +551,17 @@ a { color: inherit; }
   input, textarea { cursor: text !important; }
 }
 }
+
+/* ---------- on hold: waiting on verification ----------
+   hidden on the public site; add ?preview to the URL to see it */
+html:not(.show-hold) .hold { display: none !important; }
+html:not(.show-hold) .svc,
+html:not(.show-hold) .proof,
+html:not(.show-hold) .ins { grid-template-columns: 1fr; }
+html:not(.show-hold) .ins { gap: 0; }
+html:not(.show-hold) .ins__text { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+html:not(.show-hold) .ins__text h3, html:not(.show-hold) .ins__text p { margin: 0; }
+html:not(.show-hold) .ins__text p { flex: 1 1 320px; }
+html:not(.show-hold) .split.contact { grid-template-columns: 1fr; }
+.founder--generic .founder__bio { color: var(--ink-soft); }
+.contact .btn-row { margin: 8px 0 26px; }
