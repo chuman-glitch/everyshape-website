@@ -550,7 +550,6 @@ a { color: inherit; }
   :active { cursor: url("assets/img/cursors/click.svg") 15 15, pointer !important; }
   input, textarea { cursor: text !important; }
 }
-}
 
 /* ---------- on hold: waiting on verification ----------
    hidden on the public site; add ?preview to the URL to see it */
