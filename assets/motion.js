@@ -150,7 +150,7 @@
         f.className = "cta-fruit";
         f.alt = "";
         f.setAttribute("aria-hidden", "true");
-        f.src = BASE + "img/icon-" + (btn.getAttribute("data-fruit") || "1") + ".png";
+        f.src = BASE + "img/icon-" + (btn.getAttribute("data-fruit") || "1") + ".webp";
         label.after ? label.after(f) : btn.appendChild(f);
       }
       if (BUDDY[kind]) {
