@@ -416,5 +416,7 @@ window.ES_STRINGS = {
   "1:1 sessions with your BCBA begin, at home by video.": ["Comienzan las sesiones individuales con tu BCBA, en casa por video.", "与 BCBA 的一对一课程开始，在家通过视频进行。"],
   "Book a 30-minute call with our team, or reach us directly.": ["Reserva una llamada de 30 minutos con nuestro equipo, o contáctanos directamente.", "预约与我们团队 30 分钟的通话，或直接联系我们。"],
   "Book a call": ["Reservar llamada", "预约通话"],
-  "Telehealth ABA": ["ABA por telesalud", "远程 ABA"]
+  "Telehealth ABA": ["ABA por telesalud", "远程 ABA"],
+  "7+ years in the art field, specializing in interactive art. Chuman started Every Shape to bring that creative energy into ABA.": ["Más de 7 años en el mundo del arte, con especialidad en arte interactivo. Chuman fundó Every Shape para llevar esa energía creativa al ABA.", "在艺术领域深耕 7 年以上，专注于互动艺术。Chuman 创立 Every Shape，希望把这份创造力带进 ABA 服务。"],
+  "10+ years in the field of ABA.": ["Más de 10 años en el campo del ABA.", "从事 ABA 领域 10 年以上。"]
 };
